@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+users = t.create([{ address: '名古屋' }, { latitude: 35.1814464 }, { longitude: 136.906398 }])
