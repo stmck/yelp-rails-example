@@ -18,8 +18,8 @@
 //= require gmaps/google
 
 var markersArray = [];
-var TK_LAT = 35.681382;
-var TK_LNG = 139.766084;
+var TK_LAT = 39.681382;
+var TK_LNG = 138.000000;
 var QUERY_DELAY = 400;
 var inactive = false;
 

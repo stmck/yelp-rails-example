@@ -16,15 +16,19 @@
 
 html, body {
   height: 100%;
+  /*width: 100%;*/
   width: 100%;
-
   margin: 0;
   padding: 0;
+  position: relative;
+
 }
 
 #map_canvas {
   height: 100%;
-  width: 100%;
+  width: 50%;
+  margin-left: 0px;
+  float:left;
 }
 
 #control_container {
@@ -52,7 +56,7 @@ html, body {
 }
 
 #map_search form a {
-  background: #c41200;
+  background: #000;
   color: #fff;
   display: inline-block;
   padding: 7px 9px 7px 9px;
@@ -75,15 +79,17 @@ html, body {
   top: -2px;
 }
 
+/*検索結果*/
+
 #results {
   display: none;
-  margin-top: 15px;
+  margin: 0 0 0 10px;
   width: 465px;
+  float:left;
 }
 
 #results .result {
   clear: both;
-
   animation: fadein .5s;
   -moz-animation: fadein .5s; /* Firefox */
   -webkit-animation: fadein .5s; /* Safari and Chrome */
@@ -96,7 +102,7 @@ html, body {
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 5px;
-  text-align: center;
+  text-align: left;
   width: 110px;
 }
 
@@ -112,6 +118,12 @@ html, body {
   text-overflow: ellipsis;
   width: 100px;
   white-space: nowrap;
+  float:left;
+}
+
+.result img.biz_img {
+  float:left;
+  width:px;
 }
 
 .clear-fix {
