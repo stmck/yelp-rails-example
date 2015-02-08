@@ -51,6 +51,5 @@ gem "geocoder"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
 # Yelp gem!
 gem 'yelp'

@@ -14,13 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require underscore
-//= require gmaps/google
 
+var bounds = new google.maps.LatLngBounds();
 var markersArray = [];
-var TK_LAT = 39.681382;
-var TK_LNG = 138.000000;
-var QUERY_DELAY = 400;
+var SF_LAT = 38.66919;
+var SF_LNG = 139.7413805;
+var QUERY_DELAY = 11;
 var inactive = false;
 
 $(document).ready(function() {
@@ -34,7 +33,7 @@ $(document).ready(function() {
 var initialize = function() {
   // Define some options for the map
   var mapOptions = {
-    center: new google.maps.LatLng(TK_LAT, TK_LNG),
+    center: new google.maps.LatLng(SF_LAT, SF_LNG),
     zoom: 5,
 
     // hide controls
@@ -178,6 +177,8 @@ var geocode_address = function(map, name, location_object) {
       });
 
       // save the marker object so we can delete it later
+      bounds.extend(results[0].geometry.location);
+      map.fitBounds(bounds);
       markersArray.push(marker);
     } else {
       console.log("Geocode was not successful for the following reason: " + status);
