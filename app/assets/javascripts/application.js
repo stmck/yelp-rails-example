@@ -30,6 +30,7 @@ $(document).ready(function() {
 /**
  * Initializes the map and some events on page load
  */
+
 var initialize = function() {
   // Define some options for the map
   var mapOptions = {
