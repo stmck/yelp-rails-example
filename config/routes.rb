@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'map/index'
-
-  resources :users
-
   root 'home#index'
   post '/search' => 'home#search'
 
