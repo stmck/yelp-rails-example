@@ -15,34 +15,50 @@
 <body>
 <header>
   <nav>
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if user_signed_in? %> 
+
+    <!-- deviseのHelperメソッド【もしユーザーがlog inしてたら】-->
+    <% if user_signed_in? %>
+
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
-        deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_user.email %></strong>.
+        deviseにより自動で作成されてますので、rake routesで確認できる。 -->
+
+      Logged in as <%= current_user.email %>.
+
       <%= link_to 'プロフィール変更', edit_user_registration_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+		<div id="map_search">
+			<form><input type="text" /><a href="#" id="map_search_submit">
+				<span class="glyphicon glyphicon-search"></span></a></form>
+		</div>
+
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+
+
+			
+    <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
+
     <% else %>
       <%= link_to "サインイン", new_user_registration_path %> |
       <%= link_to "ログイン", new_user_session_path %>
+		<div id="map_search">
+			<form><input type="text" /><a href="#" id="map_search_submit">
+				<span class="glyphicon glyphicon-search"></span></a></form>
+		</div>
+
     <% end %>
+
   </nav>
 </header>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
 
-<div id="map_search">
-	<form><input type="text" /><a href="#" id="map_search_submit">
-		<span class="glyphicon glyphicon-search"></span></a></form>
-</div>
+
+		<%= yield %>
 
 
-<h1>【検索結果】</h1>
-	
-<%= yield %>
+
 
 </body>
 </html>
