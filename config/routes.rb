@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'sign/index'
+  get 'sign/show'
+
+  get 'home/index'
+  get 'home/show'
+
   root 'home#index'
   post '/search' => 'home#search'
 
