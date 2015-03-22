@@ -256,4 +256,20 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  #下記全てうまくいっていない。（保留）
+  # config.omniauth :twitter, <%= ENV["TW_API_KEY"] %>, <%= ENV["TW_API_SECRET"] %>
+  # config.omniauth :facebook, <%= ENV["FB_APP_ID"] %>, <%= ENV["FB_APP_SECRET"] %>
+
+  # config.omniauth :twitter, "ENV['TW_API_KEY']", "ENV['TW_API_SECRET']"
+  # config.omniauth :facebook, "ENV['FB_APP_ID']", "ENV['FB_APP_SECRET']"
+
+  config.omniauth :twitter, Rails.application.secrets.tw_api_key , Rails.application.secrets.tw_api_secret
+  config.omniauth :facebook, Rails.application.secrets.fb_app_id , Rails.application.secrets.fb_app_secret
+
+  # config.omniauth :twitter, 'Rails.application.secrets.tw_api_key' , 'Rails.application.secrets.tw_api_secret'
+  # config.omniauth :facebook, 'Rails.application.secrets.fb_app_id' , 'Rails.application.secrets.fb_app_secret'
+
+  #config.omniauth :twitter, <%= Rails.application.secrets.tw_api_key %>, <%= Rails.application.secrets.tw_api_secret %>
+  #config.omniauth :facebook, <%= Rails.application.secrets.fb_app_id %>, <%= Rails.application.secrets.fb_app_secret %>
 end

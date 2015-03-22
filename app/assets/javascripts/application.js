@@ -177,6 +177,18 @@ var geocode_address = function(map, name, location_object) {
         title: name
       });
 
+      // ★情報ウィンドウ
+        var infoWindow = new google.maps.InfoWindow({
+            content: 'response.businesses[0].name',
+        });
+
+       // ★クリックしたら、ウィンドウがでるよ。
+        google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.open(map, marker);
+        });
+
+
+
       // save the marker object so we can delete it later
       bounds.extend(results[0].geometry.location);
       map.fitBounds(bounds);
