@@ -24,7 +24,7 @@ def self.from_omniauth(auth)
       #user.username = auth.info.nickname # twitterで利用している名前が入る
       #user.email = create_unique_email
 
-      #■パターン1→→パターン２をリファクタリングした場合。（twitterと、FBをまとめた。他のSnsログインを使うとなると、）
+      #■パターン1→→パターン２をリファクタリングした場合。（twitterと、FBをまとめた。他のSnsログインを使うとなると、書き換え）
       if auth.provider == "twitter"
         user.email = create_unique_email # twitterの場合
         user.username = auth.info.nickname
@@ -33,8 +33,8 @@ def self.from_omniauth(auth)
         user.email = auth.info.email # その他の場合
       end
 
-      #■パターン２→→２つ書いた場合。（twitterと、FBをバラバラに書けば、この様になる。）
-      
+      # ■パターン２→→２つ書いた場合。（twitterと、FBをバラバラに書けば、この様になる。）
+
       # if auth.provider == "twitter"
       #   user.email = create_unique_email # twitterの場合
       # elsif auth.provider == "facebook"

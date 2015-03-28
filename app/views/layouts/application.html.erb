@@ -23,7 +23,7 @@
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できる。 -->
 
-      Logged in as <%= current_user.email %>.
+      <!-- Logged in as <%= current_user.email %>. -->
 
       <%= link_to 'プロフィール変更', edit_user_registration_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
