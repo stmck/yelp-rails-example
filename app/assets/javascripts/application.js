@@ -21,6 +21,7 @@ var SF_LAT = 38.66919;
 var SF_LNG = 139.7413805;
 var QUERY_DELAY = 11;
 var inactive = false;
+var open_infowindow = false;
 
 $(document).ready(function() {
   // initialize the map on load
@@ -55,6 +56,7 @@ var initialize = function() {
   bind_controls(map);
 }
 
+
 /**
  * Bind and setup search control for the map
  *
@@ -74,6 +76,10 @@ var bind_controls = function(map) {
     e.preventDefault();
     search(map);
   });
+
+
+
+
 
   // push the search controls onto the map
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(controlContainer);
@@ -179,14 +185,34 @@ var geocode_address = function(map, name, location_object) {
 
       // ★情報ウィンドウ
         var infoWindow = new google.maps.InfoWindow({
-            content: 'response.businesses[0].name',
+            content: marker.title,
+            size: new google.maps.Size(200,50)
         });
 
-       // ★クリックしたら、ウィンドウがでるよ。
-        google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.open(map, marker);
+       //①つめOK ★クリックしたら、ウィンドウがでるよ。
+        // google.maps.event.addListener(marker, 'click', function() {
+        //     infoWindow.open(map, marker);
+        // });open_infowindow
+
+      //②つめOK
+      google.maps.event.addListener(marker, 'click', function(){
+          if(open_infowindow){
+            open_infowindow.close();
+          }
+        infoWindow.open(map, marker);
         });
 
+      
+
+       // ★dblclickたら、ウィンドウがとじる。
+        google.maps.event.addListener(marker, 'dblclick', function() {
+            infoWindow.close(map, marker);
+        });
+
+       // 吹き出しを消す
+        var closeInfoWindow = function(){
+            marker.closeInfoWindow();
+        }
 
 
       // save the marker object so we can delete it later

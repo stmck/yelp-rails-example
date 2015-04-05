@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
       #  account_updateのときに、usernameも許可する
       devise_parameter_sanitizer.for(:account_update) << :username
     end
+
+    def hoge
+      gon.hoge = your_object
+    end
 end

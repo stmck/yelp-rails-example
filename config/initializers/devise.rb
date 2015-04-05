@@ -257,7 +257,6 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
-  #エラーになる。Invalid App ID: ENV['FB_APP_ID']
   config.omniauth :twitter, Rails.application.secrets.tw_api_key , Rails.application.secrets.tw_api_secret
   config.omniauth :facebook, Rails.application.secrets.fb_app_id , Rails.application.secrets.fb_app_secret
 
