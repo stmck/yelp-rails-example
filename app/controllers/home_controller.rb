@@ -12,4 +12,8 @@ def search
     render json: Yelp.client.search(params[:term], parameters) 
 end
 
+
+  
+  
+
 end

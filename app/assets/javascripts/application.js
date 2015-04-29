@@ -57,6 +57,8 @@ var initialize = function() {
 }
 
 
+
+
 /**
  * Bind and setup search control for the map
  *
@@ -143,15 +145,52 @@ var capture = function(i, map, business) {
  */
 var build_results_container = function(business) {
   return [
+  
     '<div class="result">',
+      // '<p class="like"><a href="">★</a></p>',
+      '<form accept-charset="UTF-8" action="/mypage" method="post" data-remote="true">',
+
+      '<p class="likebutton"><input type="submit" value="★" onclick="onclick_func()">',
+      // '<input name="authenticity_token" type="hidden" value="',$$('input[name="authenticity_token"]')[0].value,'" />',
+      '<input name="shop[name]" type="hidden" value="',business['name'],'" />',
+      '<input name="shop[coordinate]" type="hidden" value="',business['location']['coordinate']['latitude'],'＃',
+      business['location']['coordinate']['longitude'],
+      '" />',
+      '<input name="shop[image_url]" type="hidden" value="',business['image_url'],'" />',
+      '<input name="shop[display_phone]" type="hidden" value="',business['display_phone'],'" />',
+      '<input name="shop[location_display_address]" type="hidden" value="',business['location']['display_address'][0], 
+      business['location']['display_address'][1], business['location']['display_address'][2], business['location']['display_address'][3],
+      '" />',
+
+      '<input name="shop[rating_image_small_url]" type="hidden" value="',business['rating_img_url_small'],'" />',
+      '<input name="shop[review_count]" type="hidden" value="',business['review_count'],'" />',
+      '</p>',
+
+      '</form>', 
+       
       '<img class="biz_img" src="', business['image_url'], '">',
       '<h5><a href="', business['url'] ,'" target="_blank">', business['name'], '</a></h5>',
       '<img src="', business['rating_img_url'], '">',
       '<p>', business['review_count'], ' reviews</p>',
       '<p class="clear-fix"></p>',
     '</div>'
+    
   ].join('');
 };
+
+// click時に呼ばれる関数
+function onclick_func(){
+  // shop_f.name = business['name'];
+  shop_f.innerHTML = "お気に入りに追加されました！";
+
+}
+
+// Enterキーでsubmitしないようにする。
+// $(function() {
+//   $(document).on("keypress", "input:not(.allow_submit)", function(event) {
+//     return event.which !== 13;
+//   });
+// });
 
 /**
  * Geocode the address from the business and drop a marker on it's

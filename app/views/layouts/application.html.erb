@@ -3,7 +3,6 @@
 <head>
   <title>yelp</title>
   <meta charset="utf-8">
-  <%= include_gon %>
   <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS']}&sensor=true" %>
 
@@ -24,13 +23,12 @@
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できる。 -->
-
       <!-- Logged in as <%= current_user.email %>. -->
+      <!-- <%= link_to 'プロフィール変更', edit_user_registration_path %> | -->      
 
-      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> |
-
-      <%= link_to "マイページ", home_show_path %>
+      <%= link_to "トップ", home_index_path , data: { no_turbolink: true } %> |
+      <%= link_to "マイページ", favorite_index_path %> |
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
@@ -39,6 +37,8 @@
     <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
 
     <% else %>
+
+      <%= link_to "トップ", home_index_path %> |
       <%= link_to "会員登録", new_user_registration_path %> |
       <%= link_to "ログイン", new_user_session_path %> |
       <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %> |
@@ -50,8 +50,8 @@
   </nav>
 </header>
 
-
-
+click時に，ここにメッセージが表示されます。
+<div id="shop_f"></div>
 
 		<%= yield %>
 

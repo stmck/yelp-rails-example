@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  display_phone: MyString
+  location.display_address: MyString
+  rating_image_small_url: MyString
+  review_count: 1
+
+two:
+  name: MyString
+  image_url: MyString
+  display_phone: MyString
+  location.display_address: MyString
+  rating_image_small_url: MyString
+  review_count: 1

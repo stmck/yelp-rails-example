@@ -1,19 +1,29 @@
 Rails.application.routes.draw do
+  root 'home#index', as: :home_index
+
   devise_for :users, 
   path_names: { sign_in: "login", sign_out: "logout"}, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   get 'sign/index'
   get 'sign/show'
 
-  get 'home/index'
-  get 'home/show'
+  #get 'home/index'
 
-  root 'home#index'
+  #mypageに、お気に入りにした店を表示するgetメソッド
+  #mypageに、お気に入りにした店のパラムスデータをとばすpostメソッド
+  get 'mypage', to: 'favorite#index', as: :favorite_index
+  post 'mypage', to: 'favorite#create', as: :favorite_create
+  
+  # post 'favorite/create'
+
   post '/search' => 'home#search'
 
 
   get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
   get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
+
+  # http://localhost:3000/mypapeにひもづくはず↓
+  # get '/favorite',    to: 'home#create', as: :home_create
 
 
   # The priority is based upon order of creation: first created -> highest priority.

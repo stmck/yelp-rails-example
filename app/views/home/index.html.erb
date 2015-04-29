@@ -1,6 +1,11 @@
 <div id="map_search">
-			<form><input type="text" /><a href="#" id="map_search_submit">
-				<span class="glyphicon glyphicon-search"></span></a></form>
+			<form><input type="text" />
+				<a href="#" id="map_search_submit">
+				<span class="glyphicon glyphicon-search">
+					<input alt="検索" value="<%= params[:q] %>" type="submit">
+				</span>
+				<!-- <input class="glyphicon glyphicon-search" alt="検索" value="<%= params[:q] %>" type="submit"> -->
+			    </a></form>
 </div>
 <div id="control_container"></div>
 
