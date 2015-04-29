@@ -150,7 +150,7 @@ var build_results_container = function(business) {
       // '<p class="like"><a href="">★</a></p>',
       '<form accept-charset="UTF-8" action="/mypage" method="post" data-remote="true">',
 
-      '<p class="likebutton"><input type="submit" value="★" onclick="onclick_func()">',
+      '<p class="like"><input type="submit" value="★" onclick="onclick_func()">',
       // '<input name="authenticity_token" type="hidden" value="',$$('input[name="authenticity_token"]')[0].value,'" />',
       '<input name="shop[name]" type="hidden" value="',business['name'],'" />',
       '<input name="shop[coordinate]" type="hidden" value="',business['location']['coordinate']['latitude'],'＃',
@@ -158,11 +158,12 @@ var build_results_container = function(business) {
       '" />',
       '<input name="shop[image_url]" type="hidden" value="',business['image_url'],'" />',
       '<input name="shop[display_phone]" type="hidden" value="',business['display_phone'],'" />',
-      '<input name="shop[location_display_address]" type="hidden" value="',business['location']['display_address'][0], 
-      business['location']['display_address'][1], business['location']['display_address'][2], business['location']['display_address'][3],
+      '<input name="shop[location_display_address]" type="hidden" value="',
+      business['location']['display_address'][2], business['location']['display_address'][1], business['location']['display_address'][0],
       '" />',
 
-      '<input name="shop[rating_image_small_url]" type="hidden" value="',business['rating_img_url_small'],'" />',
+      '<input name="shop[url]" type="hidden" value="',business['url'],'" />',
+      '<input name="shop[star]" type="hidden" value="',business['rating_img_url'],'" />',
       '<input name="shop[review_count]" type="hidden" value="',business['review_count'],'" />',
       '</p>',
 

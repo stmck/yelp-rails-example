@@ -2,43 +2,5 @@
 
 <%= link_to 'プロフィール変更', edit_user_registration_path %> <br><br>
 
-
-<!-- <%= home_index_path %><br> -->
-<!-- <%= home_index_url %><br> -->
-
-
 <p>【お気に入りのお店一覧】</p>
 
-<ul>
-	<% @shops.each do |shop| %>
-	<li><%=shop.name %></li>
-	<li><%=shop.display_phone %></li>
-	<li><%=shop.display_phone %></li>
-	<li><%=shop.display_phone %></li>
-	<li><%=shop.display_phone %></li>
-	<li><%=shop.display_phone %></li>
-
-	<% end %>
-</ul>
-
-<div class="result">
-
-	<% @shops.each do |shop| %>
-
-      <img class="biz_img" src="', business['image_url'], '">',
-      <h5><a href=""><%=shop.name %></a></h5>,
-      <img src="', business['rating_img_url'], '">
-      <p class="clear-fix"></p>
-      <% end %>
-
-</div>
-
-
-
-<!-- <div class="result">
-      <img class="biz_img" src="', business['image_url'], '">',
-      <h5><a href="', business['url'] ,'" target="_blank">', business['name'], </a></h5>,
-      <img src="', business['rating_img_url'], '">
-      <p>', business['review_count'], ' reviews</p>
-      <p class="clear-fix"></p>
-</div> -->

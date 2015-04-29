@@ -30,7 +30,7 @@ class FavoriteController < ApplicationController
   private
 
   	def shop_params
-  		params.require(:shop).permit(:name, :image_url, :display_phone, :location_display_address, :rating_image_small_url, :review_count, :coordinate)
+  		params.require(:shop).permit(:name, :image_url, :display_phone, :location_display_address, :star, :review_count, :coordinate, :url)
   	end
 
 end
