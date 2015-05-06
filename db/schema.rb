@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150418060756) do
     t.string   "star"
     t.integer  "review_count"
     t.string   "url"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

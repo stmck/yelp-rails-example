@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :shops, dependent: :destroy
+  # dependent: :destroyで、ユーザー自体が破棄されたとき→そのユーザーのお気に入りも破棄される
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

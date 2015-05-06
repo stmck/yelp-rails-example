@@ -1,0 +1,439 @@
+/* 
+Template:BOOTCORP
+Author:@takeshi-du
+Website:http://designup.jp
+Lisence : under the MIT license.
+
+main area
+00.common
+01.Home
+    01-1.h2.title
+    01-2.main_slider
+    01-3.about_us
+    01-4.recent_works
+    01-5.our_term
+    01-6.our_blog
+    01-7.contact_us
+02.Blog
+*/
+/* ------------------------------------- */
+/*   00.Common  */
+/* ------------------------------------- */
+
+/*  color  */
+/*--------------------------------- */
+$key-color: #FF3838;
+
+/*  google font  */
+/*--------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Sacramento);
+
+
+
+/*  text_color  */
+/*--------------------------------- */
+
+
+/* ------------------------------------- */
+/*   01.Home    */
+/* ------------------------------------- */
+
+/*  main_slider  */
+/*--------------------------------- */
+#main .main_slider{
+    box-shadow: 0px 2px 2px #ccc;
+    .carousel-inner{
+        .item{
+            max-height: 500px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                /* css filter */
+                -webkit-filter: blur(5px);
+            filter: blur(5px);
+            }
+            .carousel-caption {
+                top: 20%;
+                font-family: 'Sacramento', cursive;
+                .title{
+                    margin:0 0 30px 0;
+                    font-size: 80px;
+                    @media (max-width: 978px){
+                        font-size: 60px;
+                    }
+                    @media (max-width: 768px){
+                        font-size: 48px;
+                    }
+                    @media (max-width: 500px){
+                        font-size: 36px;
+                    }
+                }
+                p{
+                    margin:0 0 30px 0;
+                    font-size: 18px;
+                    @media (max-width: 978px){
+                        font-size: 18px;
+                    }
+                    @media (max-width: 768px){
+                        font-size: 18px;
+                    }
+                    @media (max-width: 500px){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*  about_us  */
+/*--------------------------------- */
+#main .about_us{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #aaa;
+    .title{
+        color: #888;
+        font-size: 76px;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .title_text{
+        margin-bottom: 80px;
+        font-size: 16px;
+        color: #ccc;
+    }
+    .item_panel{
+        text-align: center;
+        padding: 0 30px;
+        margin-bottom: 40px;
+        .image{
+            margin-bottom: 10px;
+        }
+        .title{
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #777;
+        }
+        .text{
+            color: #aaa;
+        }
+    }
+}
+
+/*  recent_works  */
+/*--------------------------------- */
+#main .recent_works{
+    padding-bottom: 115px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #222;
+    .title{
+        color: #fff;
+        font-size: 76px;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .title_text{
+        margin-bottom: 80px;
+        font-size: 16px;
+        color: #7E7E7E;
+    }
+    .work_slider{
+        padding: 0 50px;
+        .carousel-indicators {
+            bottom: -30px;
+        }
+        .carousel-inner{
+            .item_panel{
+                text-align: center;
+                img{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @media (max-width: 768px){
+                        width: 250px;
+                    }
+                }
+                .work_title{
+                    text-align: center;
+                    color: #eee;
+                    font-size: 24px;
+                    font-family: 'Open Sans Condensed', sans-serif;
+                }
+            }
+        }
+        .work_img{
+            position: relative;
+            @media (max-width: 768px){
+                width: 250px;
+                margin: 0 auto;
+            }
+            img{
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+            }
+            &:hover{
+                img{
+                    opacity: 0.1;
+                }
+                i{
+                    opacity: 1;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 42%;
+                left: 42%;
+                @media (max-width: 992px){
+                    left: 38%;
+                }
+            }
+            i{
+                -webkit-transition: all .8s ease;
+                -moz-transition: all .8s ease;
+                -ms-transition: all .8s ease;
+                -o-transition: all .8s ease;
+                transition: all .8s ease;
+                opacity: 0;
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+        .carousel-control{
+            opacity: 1;
+            top: -30%;
+            width: 0;
+            &.left{
+                left: 10px;
+                background: none;
+            }
+            &.right{
+                background: none;
+            }
+        }
+        @media (max-width: 768px){
+            .carousel-control {
+                position: static;
+            }
+            .carousel-control .glyphicon-chevron-left {
+                left: 30%;
+            }
+            .carousel-control .glyphicon-chevron-right {
+                right: 30%;
+            }
+            .carousel-control .icon-prev,
+            .carousel-control .icon-next,
+            .carousel-control .glyphicon-chevron-left,
+            .carousel-control .glyphicon-chevron-right {
+                top: -7%;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+/*  our_term  */
+/*--------------------------------- */
+#main .our_term{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #aaa;
+    .title{
+        color: #888;
+        font-size: 76px;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .title_text{
+        margin-bottom: 80px;
+        font-size: 16px;
+        color: #ccc;
+    }
+    .item_panel{
+        text-align: center;
+        padding: 0 30px;
+        margin-bottom: 40px;
+        .image{
+            margin-bottom: 10px;
+            a{
+                display: block;
+            }
+            img{
+                border: 4px double #666;
+            }
+        }
+        .title{
+            margin-bottom: 10px;
+            text-shadow: none;
+            font-size: 24px;
+            color: #777;
+        }
+        .text{
+            color: #aaa;
+        }
+    }
+}
+
+/*  term_popover  */
+/*--------------------------------- */
+.popover {
+    padding: 0;
+    border: none;
+}
+.popover-title {
+    background-color: #333;
+    color: #fff;
+}
+.popover.top>.arrow {
+    border-top-color: rgba(0,0,0,.1);
+}
+
+/*  our_blog  */
+/*--------------------------------- */
+#main .our_blog{
+    padding-bottom: 60px;
+    border-bottom: 1px solid #aaa;
+    background-color: #f7f7f7;
+    .title{
+        margin-bottom: 16px;
+        color: #888;
+        font-size: 76px;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .title_text{
+        margin-bottom: 80px;
+        font-size: 16px;
+        color: #ccc;
+    }
+    .item_panel{
+        clear: both;
+        height: 120px;
+        margin-bottom: 40px;
+        .image{
+            text-align: center;
+            float: left;
+            width: 120px;
+            height: 120px;
+            margin-right: 15px;
+            border: 1px solid #aaa;
+            color: #888;
+            line-height: 120px;
+            background-color: #ccc;
+        }
+        .description{
+            margin-left: 135px;
+        }
+        .title{
+            margin-bottom: 5px;
+            padding-bottom: 4px;
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+            a{
+                color: #555;
+                &:hover{
+                    color: #FF3838;
+                    text-decoration: none;
+                }
+            }
+            .label{
+                position: relative;
+                top: -3px;
+                font-size: 11px;
+                &.label-danger {
+                    background-color: #FF3838;
+                }
+            }
+        }
+        .meta{
+            font-size: 13px;
+            color: #aaa;
+            li{
+                &:first-child{
+                    padding-left: 0;
+                }
+            }
+        }
+        .text{
+            color: #555;
+        }
+    }
+    .item_list{
+        padding-bottom: 4px;
+        margin-bottom: 20px;
+        .title{
+            margin-bottom: 5px;
+            padding-bottom: 4px;
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+            a{
+                color: #555;
+                &:hover{
+                    color: #FF3838;
+                    text-decoration: none;
+                }
+            }
+        }
+        .meta{
+            font-size: 13px;
+            color: #aaa;
+        }
+    }
+    .more{
+        text-align: left;
+        @media (max-width: 768px){
+            text-align: center;
+        }
+        a{
+            padding: 6px 24px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            color: #fff;
+            background-color: #FF3838;
+            &:hover{
+                text-decoration: none;
+                background-color: #FF5353;
+            }
+        }
+    }
+}
+
+/*  contact_us  */
+/*--------------------------------- */
+#main .contact_us{
+    border-bottom: 1px solid #000;
+    background: #fff url(../img/bg3.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    h2{
+        color: #fff;
+        font-size: 76px;
+        font-family: 'Sacramento', cursive;
+    }
+    .title_text{
+        margin-bottom: 40px;
+        font-size: 16px;
+        color: #eee;
+    }
+    .btn{
+        padding: 10px 30px;
+    }
+    .btn-default{
+        border-color: #E32F2F;
+        color: #fff;
+        background-color: #FF3838;
+        &:hover{
+            background-color: #FF4A4A;
+        }
+    }
+}
+
+/*  ついか  */
+/*--------------------------------- */
+
+.input-group input{
+    height: 50px;
+}
+
+.input-group-btn .glyphicon-search{
+    font-size:27px;
+}
+

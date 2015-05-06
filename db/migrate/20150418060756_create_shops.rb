@@ -9,7 +9,7 @@ class CreateShops < ActiveRecord::Migration
       t.string :star
       t.integer :review_count
       t.string :url
-
+      t.integer :user_id      
       t.timestamps
     end
   end

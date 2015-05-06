@@ -15,7 +15,6 @@
 </head>
 <body>
 <header>
-  <nav>
 
     <!-- deviseのHelperメソッド【もしユーザーがlog inしてたら】-->
     <% if user_signed_in? %>
@@ -38,7 +37,7 @@
 
     <% else %>
 
-      <%= link_to "トップ", home_index_path %> |
+      <%= link_to "トップ", home_index_path , data: { no_turbolink: true } %> |
       <%= link_to "会員登録", new_user_registration_path %> |
       <%= link_to "ログイン", new_user_session_path %> |
       <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %> |
@@ -47,16 +46,46 @@
 
     <% end %>
 
-  </nav>
 </header>
 
 click時に，ここにメッセージが表示されます。
 <div id="shop_f"></div>
 
-		<%= yield %>
+<%= yield %>
 
 
 
+
+
+<!-- <div id="footer" class="clear">
+      <div class="container">
+          <div class="row">
+
+              <div class="footer_panel col-sm-6 col-md-6">
+                  <h4 class="title">about</h4>
+                  <p class="text">
+                      すべての人が、楽しく過ごせるレストランを探そう！
+                  </p>
+              </div>
+  
+              <div class="footer_panel right col-sm-6 col-md-6">
+                  <h4 class="title">social</h4>
+                  <ul class="sns list-inline">
+                      <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul>
+              </div>
+
+
+          </div>
+      </div>
+
+      <div class="copy text-center">
+          copyright vegeres.jp
+      </div>
+
+</div> -->
+<!-- /footer -->
 
 </body>
 </html>

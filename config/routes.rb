@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users, 
   path_names: { sign_in: "login", sign_out: "logout"}, controllers: { omniauth_callbacks: "omniauth_callbacks" }
-
+  
   get 'sign/index'
   get 'sign/show'
 
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
 
   #mypageに、お気に入りにした店を表示するgetメソッド
   #mypageに、お気に入りにした店のパラムスデータをとばすpostメソッド
+  #mypageに、お気に入りにした店を、消すdestroyメソッド。deleteメソッド
   get 'mypage', to: 'favorite#index', as: :favorite_index
   post 'mypage', to: 'favorite#create', as: :favorite_create
-  
+  delete 'mypage/:id', to: 'favorite#destroy', as: :favorite_destroy
+
   # post 'favorite/create'
 
   post '/search' => 'home#search'
@@ -22,8 +24,6 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
   get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
 
-  # http://localhost:3000/mypapeにひもづくはず↓
-  # get '/favorite',    to: 'home#create', as: :home_create
 
 
   # The priority is based upon order of creation: first created -> highest priority.

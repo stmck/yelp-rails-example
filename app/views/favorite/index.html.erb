@@ -21,11 +21,11 @@
 	<li><%=shop.review_count %> reviews</li>
 	<% end %>
 </ul> -->
-<div id="">
-      
+
+<div id="">      
       <div class="result">
       
-            <% @shops.each do |shop| %>
+         <% @shops.each do |shop| %>
             <h4><a href="<%=shop.url %>"><%=shop.name %></a></h4><br>
       
             <img class="biz_img" src="<%=shop.image_url %>" alt="お店画像">
@@ -36,7 +36,13 @@
             <p><%=shop.review_count %> reviews</p>
    
             <p class="clear-fix"></p>
-            <% end %>
+            <!-- <p class="d_btn">お気に入りから削除</p><br> -->
+            <!-- ※favorite_destroy_path(id: shop.id) は、favoriteコントローラーのdestroyメソッドにとび、
+             とび先は、お気に入りしたshopのidの飛び先。-->
+             <%= link_to "お気に入りから削除", favorite_destroy_path(id: shop.id), method: :delete,
+                                                 data: { confirm: "お気に入りから削除しますか？" } %>
+
+         <% end %>
       
       </div>
 </div>

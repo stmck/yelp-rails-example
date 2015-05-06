@@ -9,9 +9,9 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
  *= require_tree .
  *= require_self
+ *= require custom
  */
 
 html, body {
@@ -21,9 +21,10 @@ html, body {
   margin: 0;
   padding: 0;
   position: relative;
-
 }
 
+
+/*------MAP部分------*/
 #map_canvas {
   height: 100%;
   width: 50%;
@@ -79,7 +80,7 @@ html, body {
   top: -2px;
 }
 
-/*検索結果*/
+/*------検索結果------*/
 
 #results {
   display: none;
@@ -87,7 +88,6 @@ html, body {
   width: 465px;
   float:left;
 }
-
 
 #results .result {
   clear: both;
@@ -145,7 +145,7 @@ html, body {
   width:px;
 }
 
-.clear-fix {
+.clear {
   clear: both;
   margin: 0;
   padding: 0;
@@ -183,4 +183,3 @@ html, body {
 h1{
   text-align: center;
 }
-
