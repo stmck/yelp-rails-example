@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets-custom
 
 var bounds = new google.maps.LatLngBounds();
 var markersArray = [];
@@ -55,8 +56,6 @@ var initialize = function() {
 
   bind_controls(map);
 }
-
-
 
 
 /**
@@ -150,8 +149,7 @@ var build_results_container = function(business) {
       // '<p class="like"><a href="">★</a></p>',
       '<form accept-charset="UTF-8" action="/mypage" method="post" data-remote="true">',
 
-      '<p class="like"><input type="submit" value="★" onclick="onclick_func()">',
-      // '<input name="authenticity_token" type="hidden" value="',$$('input[name="authenticity_token"]')[0].value,'" />',
+      '<p><input type="submit" value="★" onclick="onclick_func()">',
       '<input name="shop[name]" type="hidden" value="',business['name'],'" />',
       '<input name="shop[coordinate]" type="hidden" value="',business['location']['coordinate']['latitude'],'＃',
       business['location']['coordinate']['longitude'],

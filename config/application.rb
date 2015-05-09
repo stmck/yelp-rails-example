@@ -23,5 +23,6 @@ module RailsYelp
     
     # for heroku
     config.serve_static_assets = true
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

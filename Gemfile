@@ -13,8 +13,9 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
-gem 'gon'
-
+# gem 'gon'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

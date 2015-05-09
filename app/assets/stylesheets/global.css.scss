@@ -17,12 +17,14 @@ Header,Side,Footer
 /* ------------------------------------- */
 
 body{
-    font-family: Arial, sans-serif;
+font-family:"Josefin Sans",Helvetica,Arial,"Hiragino Kaku Gothic ProN",Meiryo,游ゴシック,YuGothic,sans-serif;
+
 }
 
 /*  color  */
 /*--------------------------------- */
-$key-color: #FF3838;
+$key-color: #666060;
+
 
 /*  headind  */
 /*--------------------------------- */
@@ -32,6 +34,11 @@ h1,h2,h3{
 
 /*  a  */
 /*--------------------------------- */
+
+a{text-decoration:none;color:#666060;-webkit-transition:color .25s linear;outline:none}
+a:hover{color:#999;text-decoration:none}
+
+/* 
 a{
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -39,7 +46,7 @@ a{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
+*/
 
 /*  section  */
 /*--------------------------------- */
@@ -53,7 +60,7 @@ section{
 /*  top_bar  */
 /*--------------------------------- */
 
-#header .top_bar{
+header .top_bar{
     text-align: left;
     border-bottom: 1px solid #eee;
     color: #aaa;
@@ -108,7 +115,7 @@ section{
 
 /*  nab_bar  */
 /*--------------------------------- */
-#header .nav_bar{
+header .nav_bar{
     border-bottom: 1px solid #eee;
     .navbar{
         height: 100px;
@@ -130,11 +137,11 @@ section{
                     height: 100px;
                     padding: 0;
                     font-size: 54px;
-                    color: #444;
+                    color: #555;
                     font-family: 'Sacramento', cursive;
                     line-height: 100px;
                     span{
-                        color: #FF3838;
+                        color: #555;
                     }
                 }
             }
@@ -143,8 +150,8 @@ section{
             padding-top: 0;
             padding-bottom: 0;
             color: #555;
-            font-size: 20px;
-            font-family: 'Arial', cursive;
+            font-size: 18px;
+            font-family: 'Josefin Slab', serif;
             line-height: 100px;
         }
         .navbar-nav>.open>a,
@@ -200,9 +207,9 @@ section{
         }
     }
     .copy{
-        font-size: 14px;
+        font-size:  18px;
         color: #aaa;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
     }
 }
 

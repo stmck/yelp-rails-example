@@ -67,8 +67,8 @@
       <%= link_to "マイページ", favorite_index_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>  
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>  
     <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
     <% else %>
 
@@ -91,7 +91,7 @@
                 <div class="carousel-inner">
 
                     <div class="item active">
-                      <%= image_tag("slider-1.jpg", :alt => "mainvisual", :class => "image-responsive") %>
+                      <!--<%= image_tag("slider-1.jpg", :alt => "mainvisual", :class => "image-responsive") %>-->
                         <div class="carousel-caption">
                             <h3 class="title">Vegeres</h3>
                             <p>ベジタリアン・ビーガンの方も、そうではない方も一緒に食事ができるレストランを探そう！</p>
@@ -110,6 +110,7 @@
                               </div><!-- /.col-lg-6 -->                      
                         </div>
                     </div>
+
 
             <!-- <div class="col-sm-4 col-md-3">
                 <div class="image hover-shadow">

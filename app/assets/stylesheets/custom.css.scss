@@ -3,18 +3,6 @@ Template:BOOTCORP
 Author:@takeshi-du
 Website:http://designup.jp
 Lisence : under the MIT license.
-
-main area
-00.common
-01.Home
-    01-1.h2.title
-    01-2.main_slider
-    01-3.about_us
-    01-4.recent_works
-    01-5.our_term
-    01-6.our_blog
-    01-7.contact_us
-02.Blog
 */
 /* ------------------------------------- */
 /*   00.Common  */
@@ -26,9 +14,9 @@ $key-color: #FF3838;
 
 /*  google font  */
 /*--------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 @import url(http://fonts.googleapis.com/css?family=Sacramento);
-
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600);
 
 
 /*  text_color  */
@@ -49,7 +37,7 @@ $key-color: #FF3838;
             overflow: hidden;
             img{
                 width: 100%;
-                /* css filter */
+            /* css filter */
                 -webkit-filter: blur(5px);
             filter: blur(5px);
             }
@@ -95,7 +83,6 @@ $key-color: #FF3838;
     .title{
         color: #888;
         font-size: 76px;
-        font-family: 'Open Sans Condensed', sans-serif;
     }
     .title_text{
         margin-bottom: 80px;

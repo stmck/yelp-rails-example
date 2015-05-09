@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   #mypageに、お気に入りにした店を表示するgetメソッド
   #mypageに、お気に入りにした店のパラムスデータをとばすpostメソッド
-  #mypageに、お気に入りにした店を、消すdestroyメソッド。deleteメソッド
+  #mypageに、お気に入りにした店を、  消すdestroyメソッド。deleteメソッド
   get 'mypage', to: 'favorite#index', as: :favorite_index
   post 'mypage', to: 'favorite#create', as: :favorite_create
   delete 'mypage/:id', to: 'favorite#destroy', as: :favorite_destroy
@@ -23,8 +23,6 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
   get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
