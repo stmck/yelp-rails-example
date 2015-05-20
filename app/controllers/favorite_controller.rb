@@ -14,25 +14,26 @@ class FavoriteController < ApplicationController
   end
 
   # お気に入りボタンを押した時に、お店の保存をするメソッド。 
-  #【if current_user.present? 〜end】で、現在のユーザーが存在してないなら。
-  # →（※現在、ログインしたユーザーがいないなら）
+  #【if current_user.present? 〜end】で、現在のユーザーが存在しているなら。
   def create
     if current_user.present?
-    	# 下記の検索条件で、最初の１件がもしないなら
-    	unless Shop.find_by(name: params[:shop][:name],coordinate: params[:shop][:coordinate])
-       # binding.pry
-       # current_user.shops.newで新しいshopオブジェクトを作る。user_idのみが入っている。
-       # 今のユーザーが、お気に入りとして保存したすべてのお店 のパラメーター→→@shopにいれている。
-        @shop = current_user.shops.new(shop_params)
+      	# 下記の検索条件で、最初の１件がもしないなら
+      	unless Shop.find_by(name: params[:shop][:name],coordinate: params[:shop][:coordinate])
+         # binding.pry
+         # current_user.shops.newで新しいshopオブジェクトを作る。user_idのみが入っている。
+         # 今のユーザーが、お気に入りとして保存したすべてのお店 のパラメーター→→@shopにいれている。
+          @shop = current_user.shops.new(shop_params)
 
-        # 上の１行or下の２行は、同じこと。
-        #Shop.newで、新しいshopオブジェクトが保存生成。shop_paramsには、お気に入りのお店のidが入り、@shopへ代入。
-        #shopモデルの、ユーザーid（@shop.user_id）に、現在のログインしているユーザー（current_user.id）を代入。
-        # @shop = Shop.new(shop_params)
-        # @shop.user_id = current_user.id
-
-        @shop.save
-      end 
+          # 上の１行or下の２行は、同じこと。
+          #Shop.newで、新しいshopオブジェクトが保存生成。shop_paramsには、お気に入りのお店のidが入り、@shopへ代入。
+          #shopモデルの、ユーザーid（@shop.user_id）に、現在のログインしているユーザー（current_user.id）を代入。
+          # @shop = Shop.new(shop_params)
+          # @shop.user_id = current_user.id
+          @shop.save
+        end
+    else
+         #【現在、ユーザーがないなら】
+          redirect_to root_path
     end
 
     # 店の最初の１件があった場合。ビューに表示しない。   

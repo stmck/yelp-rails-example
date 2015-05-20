@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets-custom
+
 
 var bounds = new google.maps.LatLngBounds();
 var markersArray = [];
@@ -146,7 +146,6 @@ var build_results_container = function(business) {
   return [
   
     '<div class="result">',
-      // '<p class="like"><a href="">★</a></p>',
       '<form accept-charset="UTF-8" action="/mypage" method="post" data-remote="true">',
 
       '<p><input type="submit" value="★" onclick="onclick_func()">',
@@ -171,18 +170,64 @@ var build_results_container = function(business) {
       '<h5><a href="', business['url'] ,'" target="_blank">', business['name'], '</a></h5>',
       '<img src="', business['rating_img_url'], '">',
       '<p>', business['review_count'], ' reviews</p>',
-      '<p class="clear-fix"></p>',
     '</div>'
     
   ].join('');
 };
 
 // click時に呼ばれる関数
-function onclick_func(){
-  // shop_f.name = business['name'];
-  shop_f.innerHTML = "お気に入りに追加されました！";
+// function onclick_func(){
+//   favo.innerHTML = "お気に入りに追加されました！";
+// });
+// }
 
-}
+// $(document).ready(function(){
+    
+//     $("#results .result input").click(function () {
+//       $(".alert").fadeOut("slow");
+//     });
+
+//   });
+
+
+/* bootstrap alertをx秒後に消す。view側に【class="m_fadeout"】をviewに追加する。 */
+$(document).ready(function()
+{
+  $(window).load(function()
+  {
+    window.setTimeout("$('.m_fadeout').fadeOut()", 5000);
+  });
+});
+
+
+
+setTimeout(function() {
+    $('#foo').fadeOut();
+}, 5000);
+
+
+(function($) {
+    // 表示ボタンクリックでメッセージを表示
+    $('#results .result input').on('click', function() {
+        /*
+         * 1秒かけてメッセージを表示し、
+         * その後2秒間何もせず、
+         * その後2秒かけてメッセージを非表示にする
+         */
+        $('#favo').fadeIn(1000).delay(2000).fadeOut(2000);
+    });
+    // メッセージ内の×ボタンクリックでメッセージを非表示にする
+    $('.alert .close').on('click', function() {
+        $(this).parents('.alert').hide();
+    });
+});
+
+
+
+
+
+
+
 
 // Enterキーでsubmitしないようにする。
 // $(function() {

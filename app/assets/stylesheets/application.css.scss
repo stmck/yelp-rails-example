@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
+/*↓使いたいcss以外削除*/
 @import "bootstrap-custom";
+@import "normalize";
 @import "global";
 @import "custom";
 
@@ -12,8 +14,8 @@ html, body {
   position: relative;
 }
 
-
 /*------MAP部分------*/
+
 #map_canvas {
   height: 100%;
   width: 50%;
@@ -25,11 +27,6 @@ html, body {
   margin: 20px;
 }
 
-#map_search {
-  box-shadow: 2px 2px 3px #999;
-  -moz-box-shadow: 2px 2px 3px #999;
-  -webkit-box-shadow: 2px 2px 3px #999;
-}
 
 #map_search input[type=text] {
   border: 1px solid #fff;
@@ -68,6 +65,7 @@ html, body {
   position: absolute;
   top: -2px;
 }
+
 
 /*------検索結果------*/
 
@@ -113,9 +111,7 @@ html, body {
   background:none;
   border: none;
   text-shadow: 0 1px #D7A405;
-  /*box-shadow: 0 5px #4c4c4c;*/
-  /*background:url(../img/form-btn-clear.png) center center no-repeat;*/
-  /*background-color: #7f7f7f;*/
+
 }
 
 #results .result input:active{
@@ -151,6 +147,8 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/*------検索結果 お店一覧が見える。---------*/
 
 @keyframes fadein {
   from { opacity: 0 }

@@ -53,7 +53,7 @@ def self.from_omniauth(auth)
     end
   end
 
-# Devise の RegistrationsController はリソースを生成する前に self.new_sith_session を呼ぶ
+  # Devise の RegistrationsController はリソースを生成する前に self.new_sith_session を呼ぶ
   # つまり、self.new_with_sessionを実装することで、サインアップ前のuserオブジェクトを初期化する
   # ときに session からデータをコピーすることができます。
   # OmniauthCallbacksControllerでsessionに値を設定したので、それをuserオブジェクトにコピーします。
@@ -86,6 +86,7 @@ def self.from_omniauth(auth)
       super
     end
   end
+
 
   # 通常サインアップ時のuid用、Twitter OAuth認証時のemail用にuuidな文字列を生成
   def self.create_unique_string

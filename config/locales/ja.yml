@@ -1,5 +1,16 @@
 ---
+# 書き方が決まっている。モデル名(user)の後、カラム名(username)を書く。
+# ""の中に、日本語。パスワードも書き換えたければ同様に。
 ja:
+  activerecord:
+    models:
+      user: "アカウント情報"
+    attributes:
+      user:
+        username: "Name"
+        current_password: "現在のPassword"
+        password: "Password"
+        password_confirmation: "Password 確認"
   date:
     abbr_day_names:
     - 日

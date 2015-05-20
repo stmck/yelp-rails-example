@@ -1,0 +1,56 @@
+<div class="sign container2">
+<h1>My account</h1>
+
+<section>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :Name %>
+  <%= f.text_field :username, autofocus: true, readonly: @readonly %></div>
+
+  <!--もし現在のuserのproviderに入っているものが、“twitter”か“FB”でない時、emailのinput部分は、見せる。elseは、ここではいらない。-->
+  <% if current_user.provider != "twitter" && current_user.provider != "facebook" %>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+    <span>★</span>
+    <%= f.label :password %>  <span class="i_txt"> ( Passwordを変更する場合のみ記入。)</span><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+    <span>★</span>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <!-- 最後に追加 -->
+    <% if f.object.encrypted_password.present? %>
+      <div><%= f.label :current_password %>
+        
+        <%= f.password_field :current_password, autocomplete: "off" %></div>
+    <% end %>
+
+    <div class="actions btn_type1">
+    <%= f.submit "プロフィールを更新" %>
+    </div>
+  <% end %>
+
+<% end %>
+</section>
+
+<section class="t_line">
+<h2 class="heading_002">アカウントを削除</h2>
+
+<div class="btn_type2"><%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "アカウントを削除しますが宜しいですか?" }, method: :delete %></div>
+
+<div class="t_back"><%= link_to "> My favorite list へ", :back %></div>
+</section>
+</div>

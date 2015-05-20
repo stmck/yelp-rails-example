@@ -1,13 +1,15 @@
-<div id="map_search">
+<div id="map_search" class="container">
                 <form><input type="text" />
                     <a href="#" id="map_search_submit">
                     <span class="glyphicon glyphicon-search">
-                        <input alt="検索" value="<%= params[:q] %>" type="submit">
+                        <input alt="検索" value="<%= params[:q] %>" type="submit" placeholder="キーワード、地域を入力">
                     </span>
-                    <!-- <input class="glyphicon glyphicon-search" alt="検索" value="<%= params[:q] %>" type="submit"> -->
                     </a>
                 </form>
 </div>
+
+
+
 
     <div id="control_container"></div>
     <div id="map_canvas"></div>

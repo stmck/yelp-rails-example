@@ -14,34 +14,44 @@
 </head>
 <body>
         <header>
+
+            <div id="header">
             <div class="nav_bar">
                 <div class="container">
 
                     <nav class="navbar navbar-default" role="navigation">
-                        <div class="navbar-header">                           
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            
                             <h1 class="title"><span class="navbar-brand"><%= link_to "vegeres", home_index_path , data: { no_turbolink: true } %></span></h1>
                         </div>
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="">
-                                    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+
+                               <li class="dropdown">
+                                    <a href="#">About vegeres</a>
                                 </li>
-                                <li class="">
-                                    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-                                </li>
-                                <li class="">
-                                    <%= link_to "Sign in", new_user_registration_path %>
+                                
+                                <li class="dropdown">
+                                    <a href="/users/sign_up">Sign up</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
+                                    <a href="/users/login">Sign in</a>
                                 </li>
+                                <!-- <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="" href="/users/auth/facebook"><i class="fa fa-facebook"></i>    <span>Facebook</span>アカウントでログイン</a></li>
+                                        <li><a class="" href="/users/auth/twitter"><i class="fa fa-twitter"></i>    <span class="b_tw">twitter</span>アカウントでログイン</a></li>
+                                        <li><a href="/users/logins">Emailアドレスでログイン</a></li>
+                                    </ul>
+                                </li> -->
                             </ul>
                         </div>
                     </nav>
@@ -51,8 +61,12 @@
             </div>
             <!-- /nav_bar -->
 
-        <!-- </div> -->
-     <!-- /header -->
+        </div>
+        <!-- /header -->
+
+ 
+  </header>
+ <!-- /header -->
 
     <!-- deviseのHelperメソッド【もしユーザーがlog inしてたら】-->
     <% if user_signed_in? %>
@@ -60,15 +74,31 @@
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できる。 -->
-      <!-- Logged in as <%= current_user.email %>. -->
-      <!-- <%= link_to 'プロフィール変更', edit_user_registration_path %> | -->      
 
       <%= link_to "トップ", home_index_path , data: { no_turbolink: true } %> |
       <%= link_to "マイページ", favorite_index_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+       
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>  
+  
+
+        <span class="m_fadeout"><%= notice %></span>
+        <span class="m_fadeout"><%= alert %></span>
+
+        <!-- ★をclick時に，ここにメッセージが表示されます。-->
+        <span id="favo" class="alert"></span>
+
+
+
+
+        <!--うまくいったような感じだった。 <button id="show" class="btn btn-info">メッセージを表示</button>
+        <div class="alert alert-info m_fadeout">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>ログインしました！</strong>
+        </div>
+ -->
+
+
     <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
     <% else %>
 
@@ -79,94 +109,25 @@
       <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
 
     <% end %>
-</header>
+  
 
 
 
-<!-- click時に，ここにメッセージが表示されます。-->
- <div id="shop_f"></div>
-
-        <div id="main">
-            <div class="main_slider">
-                <div class="carousel-inner">
-
-                    <div class="item active">
-                      <%= image_tag("slider-1.jpg", :alt => "mainvisual", :class => "image-responsive") %>
-                        <div class="carousel-caption">
-                            <h3 class="title">Vegeres</h3>
-                            <p>ベジタリアン・ビーガンの方も、そうではない方も一緒に食事ができるレストランを探そう！</p>
-
-                         <!-- <button type="submit" class="btn btn-lang">現在地から探す</button>    -->
-                          <div class="col-sm-6 col-md-6">
-
-                            <div class="input-group">
-                              <input type="text" class="form-control" placeholder="キーワード、地域を入力">
-
-                              <span class="input-group-btn">
-                                <button class="btn" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                              </span>
-
-                                </div><!-- /input-group -->
-                              </div><!-- /.col-lg-6 -->                      
-                        </div>
-                    </div>
-
-            <!-- <div class="col-sm-4 col-md-3">
-                <div class="image hover-shadow">
-                    <img src="img/man.png" height="128" width="128" alt="">
-                </div>
-                <div class="description">
-                    <h3 class="title">Support</h3>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div> -->
-                </div>
-
-            </div>
-            <!-- /main_slider -->
-          </div>
 
 
-
-          
+         
 
 <%= yield %>
 
 
-
-
-
-
-
 <div id="footer" class="clear">
-      <!-- <div class="container">
-          <div class="row">
-
-              <div class="footer_panel col-sm-6 col-md-6">
-                  <h4 class="title">about</h4>
-                  <p class="text">
-                      すべての人が、楽しく過ごせるレストランを探そう！
-                  </p>
-              </div>
-  
-              <div class="footer_panel right col-sm-6 col-md-6">
-                  <h4 class="title">social</h4>
-                  <ul class="sns list-inline">
-                      <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  </ul>
-              </div>
-
-
-          </div>
-      </div> -->
 
       <div class="copy text-center">
-          copyright vegeres
+          &#169; vegeres
       </div>
 
 </div>
 <!-- /footer -->
-
+</div>
 </body>
 </html>

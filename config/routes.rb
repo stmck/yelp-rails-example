@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root 'home#index', as: :home_index
 
   devise_for :users, 
-  path_names: { sign_in: "login", sign_out: "logout"}, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  path_names: { sign_in: "login", sign_out: "logout"}, 
+  controllers: { omniauth_callbacks: "omniauth_callbacks", registrations: 'users/registrations' }
   
   get 'sign/index'
   get 'sign/show'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
   get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

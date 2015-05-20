@@ -21,6 +21,8 @@ font-family:"Josefin Sans",Helvetica,Arial,"Hiragino Kaku Gothic ProN",Meiryo,æ¸
 
 }
 
+
+
 /*  color  */
 /*--------------------------------- */
 $key-color: #666060;
@@ -38,20 +40,12 @@ h1,h2,h3{
 a{text-decoration:none;color:#666060;-webkit-transition:color .25s linear;outline:none}
 a:hover{color:#999;text-decoration:none}
 
-/* 
-a{
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-*/
+
 
 /*  section  */
 /*--------------------------------- */
 section{
-    padding: 80px 0;
+    /*padding: 80px 0;*/
 }
 /* ------------------------------------- */
 /*   01.Header  */
@@ -60,7 +54,7 @@ section{
 /*  top_bar  */
 /*--------------------------------- */
 
-header .top_bar{
+#header .top_bar{
     text-align: left;
     border-bottom: 1px solid #eee;
     color: #aaa;
@@ -115,7 +109,7 @@ header .top_bar{
 
 /*  nab_bar  */
 /*--------------------------------- */
-header .nav_bar{
+#header .nav_bar{
     border-bottom: 1px solid #eee;
     .navbar{
         height: 100px;
@@ -152,6 +146,8 @@ header .nav_bar{
             color: #555;
             font-size: 18px;
             font-family: 'Josefin Slab', serif;
+            /*font-family: 'Josefin Sans', serif;
+            font-weight: 300;*/
             line-height: 100px;
         }
         .navbar-nav>.open>a,
@@ -290,3 +286,12 @@ header .nav_bar{
         }
     }
 }
+
+
+
+
+
+
+
+
+

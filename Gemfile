@@ -15,6 +15,7 @@ gem 'omniauth-twitter'
 
 # gem 'gon'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
 
 # Use SCSS for stylesheets
