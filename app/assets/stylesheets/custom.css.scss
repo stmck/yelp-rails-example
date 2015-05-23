@@ -29,12 +29,12 @@ $key-color: #FF3838;
 @import url(http://fonts.googleapis.com/css?family=Sacramento);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600);
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:100,300,400,600);
+
 
 
 /*  text_color  */
 /*--------------------------------- */
-
-
 
 
 /*  ついか  */
@@ -97,6 +97,108 @@ display:none;をいれるべき？ちょっと、どうさが遅くて？？ */
     width: 200px ;
 }
 
+/*------トップページ---------*/
+
+.input-group .form-control:first-child{
+    border-radius: 50px;
+}
+
+.yelp_note{
+    clear:both;
+    padding:20px 0 0 0;
+    a img{
+        clear:both;
+        margin: 0 0 12px 0;
+    }
+    span{
+        font-size:16px;
+    }
+}
+
+.tx_h{
+  font-size: 1.05em;
+}
+
+/*------“”マーク-----*/
+
+.top_m span{
+font-family: 'IM Fell DW Pica', serif;
+padding: 3px;
+font-size: 0.5em
+}
+
+.im_t{
+font-family: 'IM Fell DW Pica', serif;
+padding: 3px;
+font-size: 0.8em;
+}
+
+/*------トップイメージと重なる黒---------*/
+
+.carousel-caption {
+      background:rgba(0,0,0,0.4);
+      position: absolute;      
+      z-index: 10;
+      padding-bottom: 20px;
+      color: white;
+      text-align: center;
+/*      margin: 3% 5%;
+*/        
+        h3.title{
+          font-family: 'Sacramento', cursive;
+          font-size: 8em;
+          margin: -21px 0 80px 0;
+        }
+        p{
+          font-size: 16px;
+          margin:0 15px 20px;
+        }
+
+    @media (min-width: 1200px) {
+      margin: 0% 6%;
+      height:90%;
+
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      /*margin: 0 0 1.5%;*/
+      /*padding:0;*/
+      /*margin: 0% 5%;*/
+      bottom:0;
+
+    }    
+    @media (min-width: 768px) and (max-width: 991px) {
+         h3.title{
+          font-size: 6.5em;
+          margin: 0 0 40px 0;
+        }
+         /*margin: 50px 0 0 0;*/
+          bottom:0;
+
+    }
+    @media screen and (max-width: 767px) {      
+        h3.title{
+          font-size: 6em;
+          margin: 1% 0 2% 0;
+        }
+        p{
+          font-size: 16px;
+          margin:35px 0 20px 0;
+        }
+        bottom:-5px;
+    }
+}
+
+
+/*.bk_01{
+  background: rgba(255,0,0,0.7);
+  width:60%;
+  margin:0 auto;
+  z−index:30;
+  height:50%;
+}
+*/
+
+
 
 /*------ログイン画面など---------*/
 
@@ -111,7 +213,7 @@ display:none;をいれるべき？ちょっと、どうさが遅くて？？ */
 }
 
 .fs_0{
-    font-size:16px;
+    font-size:20px;
 }
 
 .heading_002{
@@ -157,7 +259,6 @@ input[type="text"], input[type="password"], input[type="email"],textarea,select{
     font-family:"Josefin Sans";
     font-weight:500;
     color:#363736;
-
 }
 
 input[type="checkbox"]{
@@ -171,6 +272,8 @@ input[type="checkbox"]{
 span.rem_label{
     margin:3px 0 0 0;
 }
+
+/*---ログイン・会員登録ボタン---*/
 
 .btn_type1 input{
     margin :40px 0 0 0;
@@ -209,6 +312,7 @@ span.rem_label{
     cursor: pointer;
     border:none;
 }
+/*----アカウント削除ボタン----*/
 
 .btn_type2 input{
     margin :40px 0 0 0;
@@ -233,15 +337,18 @@ span.rem_label{
   outline: transparent;
 }
 
-/*------会員登録・ログイン---------*/
+/*------会員登録・ログイン・Myページ系・About---------*/
 
 .container2 {
   max-width: 900px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin:30px auto 0;
   font-family:"Josefin Sans";
+}
+
+.container2 h1{
+  margin:0 auto 40px;
 }
 
 ul.other_sign{   
@@ -329,7 +436,7 @@ ul.other_sign li a i{
   @media screen and (max-width: 991px) {
         width: 50%;
     }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
         width: 100%;
     }
 }
@@ -362,11 +469,6 @@ ul.other_sign li a i{
   right: 10px;
 }
 
-
-
-
-
-
 /*------My account >リンク------*/
 
 .t_right{
@@ -395,4 +497,19 @@ input[readonly]{
     font-style: italic;
     font-size: 13px;
 }
+
+/*---------About ページ-----------*/
+
+.p_01{
+  width: 100%;
+}
+
+#about section{
+  clear:both;
+}
+
+
+
+
+
 

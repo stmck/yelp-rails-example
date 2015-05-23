@@ -3,12 +3,8 @@ Template:BOOTCORP
 Author:@takeshi-du
 Website:http://designup.jp
 Lisence : under the MIT license.
-
-Header,Side,Footer
 00.common
 01.Header
-    01-1.top_bar
-    01-2.nab_bar
 02.Footer
 */
 
@@ -18,10 +14,7 @@ Header,Side,Footer
 
 body{
 font-family:"Josefin Sans",Helvetica,Arial,"Hiragino Kaku Gothic ProN",Meiryo,游ゴシック,YuGothic,sans-serif;
-
 }
-
-
 
 /*  color  */
 /*--------------------------------- */
@@ -33,14 +26,15 @@ $key-color: #666060;
 h1,h2,h3{
     margin: 0;
 }
+h1{
+  text-align: center;
+}
 
 /*  a  */
 /*--------------------------------- */
 
 a{text-decoration:none;color:#666060;-webkit-transition:color .25s linear;outline:none}
 a:hover{color:#999;text-decoration:none}
-
-
 
 /*  section  */
 /*--------------------------------- */
@@ -87,25 +81,11 @@ section{
                     line-height: 40px;
                 }
             }
-            &.facebook a:hover{
-                color: #fff;
-                background-color: #3B5998;
-            }
-            &.twitter a:hover{
-                color: #fff;
-                background-color: #00ACED;
-            }
-            &.google a:hover{
-                color: #fff;
-                background-color: #DD4B39;
-            }
-            &.github a:hover{
-                color: #fff;
-                background-color: #000;
-            }
         }
     }
 }
+
+/*#header .nav_bar .navbar .navbar-header .title .navbar-brand*/
 
 /*  nab_bar  */
 /*--------------------------------- */
@@ -118,13 +98,18 @@ section{
             background: none;
             border: none;
         }
+
         .navbar-header{
             height: 100px;
+
             .navbar-toggle {
                 margin-top: 33px;
-                -webkit-border-radius: 2px;
+                /*-webkit-border-radius: 2px;
                 -moz-border-radius: 2px;
-                border-radius: 2px;
+                border-radius: 2px;*/
+                border: none;
+                background: none;
+
             }
             .title{
                 .navbar-brand {
@@ -137,18 +122,44 @@ section{
                     span{
                         color: #555;
                     }
+                    @media screen and (max-width: 991px) {
+                          line-height: 100px;
+                    }
+                    @media screen and (max-width: 768px) {
+                         height: 90px;
+                         line-height: 90px;
+                    }
                 }
             }
         }
+
         .navbar-nav>li>a {
-            padding-top: 0;
-            padding-bottom: 0;
+            padding: 0 0 0 42px;            
             color: #555;
             font-size: 18px;
             font-family: 'Josefin Slab', serif;
             /*font-family: 'Josefin Sans', serif;
             font-weight: 300;*/
             line-height: 100px;
+            background: rgba(255,255,255,0.9);
+            z-index: 10;
+            span{
+              font-size:12px;
+            }
+            @media screen and (max-width: 991px) {
+                  line-height: 100px;
+            }
+            @media screen and (max-width: 768px) {
+                  line-height: 3.5;
+                  padding: 0 0 0 5px;
+                  border-bottom: 1.5px dotted #ccc;
+
+            }
+        }
+        .navbar-nav>li:last-child>a {
+            @media screen and (max-width: 768px) {
+                  border-bottom: none;
+            }
         }
         .navbar-nav>.open>a,
         .navbar-default .navbar-nav>.open>a:hover,
@@ -170,6 +181,8 @@ section{
         }
     }
 }
+
+
 
 
 /* ------------------------------------- */
@@ -204,86 +217,8 @@ section{
     }
     .copy{
         font-size:  18px;
-        color: #aaa;
+        color: #847F7F;
         font-family: 'Josefin Sans', sans-serif;
-    }
-}
-
-/*  work_image  */
-/*--------------------------------- */
-#footer .work_image{
-    li{
-        text-align: center;
-        width: 80px;
-        height: 80px;
-        margin: 0 10px 10px 0;
-        border: 1px solid #555;
-        line-height: 80px;
-        color: #ccc;
-        font-size: 12px;
-        background-color: #333;
-    }
-}
-
-/*  blog  */
-/*--------------------------------- */
-#footer .item_list{
-    padding-bottom: 4px;
-    margin-bottom: 20px;
-    .blog_title{
-        margin-bottom: 5px;
-        padding-bottom: 4px;
-        font-size: 16px;
-        border-bottom: 1px solid #555;
-        a{
-            color: #aaa;
-            font-family: 'Open Sans Condensed', sans-serif;
-            &:hover{
-                color: #FF3838;
-                text-decoration: none;
-            }
-        }
-    }
-    .meta{
-        font-size: 13px;
-        color: #888;
-    }
-}
-
-/*  sns  */
-/*--------------------------------- */
-#footer .sns{
-    li{
-        height: 40px;
-        font-size: 16px;
-        a{
-            display: block;
-            text-align: center;
-            width: 40px;
-            height: 40px;
-            color: #eee;
-            background-color: #999;
-            i{
-                font-size: 16px;
-                line-height: 40px;
-            }
-        }
-        &.facebook a:hover{
-            color: #fff;
-            background-color: #3B5998;
-        }
-        &.twitter a:hover{
-            color: #fff;
-            background-color: #00ACED;
-        }
-        &.google a:hover{
-            color: #fff;
-            background-color: #DD4B39;
-        }
-        &.github a:hover{
-            color: #fff;
-            background-color: #000;
-        }
     }
 }
 

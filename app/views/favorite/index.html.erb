@@ -4,12 +4,14 @@
         <%= link_to 'My account  >', edit_user_registration_path %> 
     </p>
     
-    <h1>My favorite list <span><i class="fa fa-diamond"></i></span></h1>
-                 
+    <h1>My favorite list</h1>
+
              <% @shops.each do |shop| %>
              <div class="result cf col-md-4 col-sm-6 ">
                 <h4>★ <a href="<%=shop.url %>"><%=shop.name %></a></h4>
-                <img class="biz_img" src="<%=shop.image_url %>" alt="お店画像">
+                <a href="<%=shop.url %>">
+                    <img class="biz_img" src="<%=shop.image_url %>" alt="お店画像">
+                </a>
                 <p><%=shop.display_phone %></p>
                 <p><%=shop.location_display_address %></p>
                 
@@ -23,9 +25,10 @@
                  <div class="btn_delete"><%= link_to "delete", favorite_destroy_path(id: shop.id), method: :delete,
                                                          data: { confirm: "お気に入りリストから削除しますか？" } %></div>
              </div>
-             <% end %>     
+             <% end %> 
 
-    </div>
+             <p class="yelp_note container"><span>※vegeres</span>は、<span>yelp</span>から情報を提供されています。<a href="http://www.yelp.com/" target="_blank"><%= image_tag("yelp_logo02.png", :alt => "yelp", :width =>"55px") %></a></p>
+            </div>
 </div>
 
 

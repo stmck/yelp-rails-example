@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   path_names: { sign_in: "login", sign_out: "logout"}, 
   controllers: { omniauth_callbacks: "omniauth_callbacks", registrations: 'users/registrations' }
   
-  get 'sign/index'
-  get 'sign/show'
+  get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
+  get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
 
-  #get 'home/index'
+  #Aboutページ  
+  get 'about', to: 'about#index', as: :about_index
 
   #mypageに、お気に入りにした店を表示するgetメソッド
   #mypageに、お気に入りにした店のパラムスデータをとばすpostメソッド
@@ -17,14 +18,7 @@ Rails.application.routes.draw do
   post 'mypage', to: 'favorite#create', as: :favorite_create
   delete 'mypage/:id', to: 'favorite#destroy', as: :favorite_destroy
 
-  # post 'favorite/create'
-
   post '/search' => 'home#search'
-
-
-  get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
-  get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

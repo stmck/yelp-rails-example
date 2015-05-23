@@ -1,17 +1,67 @@
-<div id="map_search" class="container">
-                <form><input type="text" />
-                    <a href="#" id="map_search_submit">
-                    <span class="glyphicon glyphicon-search">
-                        <input alt="検索" value="<%= params[:q] %>" type="submit" placeholder="キーワード、地域を入力">
-                    </span>
-                    </a>
-                </form>
+
+
+<!--トップ画像・検索フォーム-->
+<div id="main">
+    <div class="main_slider">
+        <div class="carousel-inner">
+            <div class="item active">
+            <!-- <div class="bk_01"> </div> -->
+
+              <%= image_tag("slider-1.jpg", :alt => "mainvisual") %>
+                <div class="carousel-caption">
+                    <h3 class="title">vegeres</h3>
+                    <p>ベジタリアン・ビーガンの方も、そうではない方も一緒に楽しく食事ができるレストランを探そう！</p>
+
+
+                    <div id="map_search">
+
+                      <form class="form-search">
+                      <a id="map_search_submit">
+                      <div class="input-group">
+                        <input type="text" class="form-control input-medium search-query" placeholder="例：東京駅、渋谷駅">
+
+                        <span class="input-group-btn">
+                          <input alt="検索" value="<%= params[:q] %>" type="submit" >
+                        </span>
+                      </div><!-- /input-group -->
+                      </form>
+                      </div><!-- /map_search -->                    
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- /main_slider -->
+</div>
+<div class="top_m sign container2">
+<section>
+<h1>How to use <span>“</span>vegeres<span>”</span></h1>
+<p class="tx_h">上の検索窓から駅名を入力すると、その付近のベジタリアン向けのレストランが表示されます！</p>
+
+</section>
 </div>
 
 
 
+<div id="results"></div>
 
-    <div id="control_container"></div>
-    <div id="map_canvas"></div>
-    <div id="results"></div>
+<div id="map_canvas"></div>
+<div id="control_container"></div>
 
+
+<p class="yelp_note container"><span>※vegeres</span>は、<span>yelp</span>から情報を提供されています。<a href="http://www.yelp.com/" target="_blank"><%= image_tag("yelp_logo02.png", :alt => "yelp", :width =>"55px") %></a></p>
+</div> 
+
+<!-- 
+#map_canvas
+#control_container
+  #map_search
+    form
+      input type='text'
+      a#map_search_submit href='#': span.glyphicon.glyphicon-search
+
+  .attribution
+    p powered by Yelp
+    p.burst= image_tag 'burst_tiny.png'
+
+  #results
+ -->

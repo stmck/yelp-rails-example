@@ -5,15 +5,11 @@ class HomeController < ApplicationController
   def index
   end
 
-def search
+  def search
     parameters = { term:'野菜-ベジタリアン', limit: 20 }
     #parameters = { term:'インド', limit: 20 }
     #binding.pry
     render json: Yelp.client.search(params[:term], parameters) 
-end
-
-
-  
-  
+  end
 
 end
