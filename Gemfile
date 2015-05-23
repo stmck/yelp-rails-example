@@ -45,6 +45,7 @@ gem 'pry-rails', group: :development
 gem 'slim'
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
 
