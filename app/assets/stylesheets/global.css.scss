@@ -61,7 +61,7 @@ section{
             padding: 0;
             margin-left: -4px;  //fix:display bug
             border-left: 1px solid #eee;
-            font-family: 'Open Sans Condensed', sans-serif;
+            /*font-family: 'Open Sans Condensed', sans-serif;*/
             font-size: 16px;
             line-height: 40px;
             &:last-child{
@@ -84,8 +84,6 @@ section{
         }
     }
 }
-
-/*#header .nav_bar .navbar .navbar-header .title .navbar-brand*/
 
 /*  nab_bar  */
 /*--------------------------------- */
@@ -117,7 +115,7 @@ section{
                     padding: 0;
                     font-size: 54px;
                     color: #555;
-                    font-family: 'Sacramento', cursive;
+                    font-family: 'Sacramento';
                     line-height: 100px;
                     span{
                         color: #555;
@@ -137,7 +135,7 @@ section{
             padding: 0 0 0 42px;            
             color: #555;
             font-size: 18px;
-            font-family: 'Josefin Slab', serif;
+            font-family: 'Josefin Slab';
             /*font-family: 'Josefin Sans', serif;
             font-weight: 300;*/
             line-height: 100px;
@@ -208,17 +206,17 @@ section{
             margin-bottom: 20px;
             color: #eee;
             font-size: 24px;
-            font-family: 'Open Sans Condensed', sans-serif;
+            /*font-family: 'Open Sans Condensed', sans-serif;*/
         }
         .text{
             color: #aaa;
-            font-family: 'Open Sans Condensed', sans-serif;
+            /*font-family: 'Open Sans Condensed', sans-serif;*/
         }
     }
     .copy{
         font-size:  18px;
         color: #847F7F;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Josefin Sans';
     }
 }
 

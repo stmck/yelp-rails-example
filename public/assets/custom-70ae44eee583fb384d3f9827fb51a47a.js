@@ -1,0 +1,1 @@
+!function(e){e("#show").on("click",function(){e(".alert").fadeIn(1e3).delay(2e3).fadeOut(2e3)}),e(".alert .close").on("click",function(){e(this).parents(".alert").hide()})}(jQuery);

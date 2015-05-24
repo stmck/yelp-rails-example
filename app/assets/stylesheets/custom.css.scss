@@ -31,13 +31,11 @@ $key-color: #FF3838;
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600);
 @import url(http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:100,300,400,600);
 
-
-
 /*  text_color  */
 /*--------------------------------- */
 
 
-/*  ついか  */
+/*  input フォーム系  */
 /*--------------------------------- */
 
 .input-group input{
@@ -46,55 +44,6 @@ $key-color: #FF3838;
 
 .input-group-btn .glyphicon-search{
     font-size:27px;
-}
-
-
-/*  alert notice のメッセージ  */
-/*--------------------------------- */
-
-/* 表示ボタン */
-#show {
-    /* 画面中央に表示 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-/* メッセージ */
-.alert {
-    /* 初期状態は非表示 */
-    width: 300px;
-    /* 画面上部に表示 */
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    margin-left: -175px; /* (width + padding-left + padding-right + border-left + border-right) の半分 */
-}
-
-/* ログイン時などのメッセージだし */
-
-/* 途中までなんかうまくいったが再読み込みするとまたでてしまう
-display:none;をいれるべき？ちょっと、どうさが遅くて？？ */
-
-.m_fadeout {
-    width: 150px;
-    /* 画面上部に表示 */
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    margin-left: -175px; /* (width + padding-left + padding-right + border-left + border-right) の半分 */
-    /*background-color: #3FB8AF;
-    border-radius: 2px;*/
-    display:block;
-    color:#999;
-    border-bottom:2px dotted;
-}
-
-#foo{
-    background: #eee ;
-    margin:25px;
-    padding:25px;
-    width: 200px ;
 }
 
 /*------トップページ---------*/
@@ -122,13 +71,13 @@ display:none;をいれるべき？ちょっと、どうさが遅くて？？ */
 /*------“”マーク-----*/
 
 .top_m span{
-font-family: 'IM Fell DW Pica', serif;
+font-family: 'IM Fell DW Pica';
 padding: 3px;
 font-size: 0.5em
 }
 
 .im_t{
-font-family: 'IM Fell DW Pica', serif;
+font-family: 'IM Fell DW Pica';
 padding: 3px;
 font-size: 0.8em;
 }
@@ -145,7 +94,7 @@ font-size: 0.8em;
 /*      margin: 3% 5%;
 */        
         h3.title{
-          font-family: 'Sacramento', cursive;
+          font-family: 'Sacramento';
           font-size: 8em;
           margin: -21px 0 80px 0;
         }
@@ -187,18 +136,6 @@ font-size: 0.8em;
         bottom:-5px;
     }
 }
-
-
-/*.bk_01{
-  background: rgba(255,0,0,0.7);
-  width:60%;
-  margin:0 auto;
-  z−index:30;
-  height:50%;
-}
-*/
-
-
 
 /*------ログイン画面など---------*/
 
