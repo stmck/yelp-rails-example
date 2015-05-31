@@ -1,8 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap-custom";
 @import "normalize";
-@import "global";
 @import "custom";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*---header・footer---*/
+
+/* ------------------------------------- */
+/*   00.Common  */
+/* ------------------------------------- */
 
 html, body {
   height: 100%;
@@ -13,219 +21,208 @@ html, body {
   position: relative;
 }
 
-/*------MAP部分------*/
-
-#map_canvas {
-  height: 80%;
-  width:  95%;
-  margin: 0 auto;
-  @media screen and (min-width: 992px) {
-  
-  }
-  @media screen and (max-width: 991px) {
-        width: 100%;
-        /*height: 100%;*/
-
-  }
-  @media screen and (max-width: 768px) {
-        width: 100%;
-  }
+body{
+font-family:"Josefin Sans",Helvetica,Arial,"Hiragino Kaku Gothic ProN",Meiryo,游ゴシック,YuGothic,sans-serif;
 }
 
-#control_container {
-  margin: 20px;
+/*  color  */
+/*--------------------------------- */
+$key-color: #666060;
+
+/*  headind  */
+/*--------------------------------- */
+h1,h2,h3{
+    margin: 0;
+}
+h1{
+  text-align: center;
 }
 
-/*------検索ボックス部分------*/
+/*  a  */
 
-#map_search{
-  width:  90%;
-  margin: 0 auto;
+a{text-decoration:none;color:#666060;-webkit-transition:color .25s linear;outline:none}
+a:hover{color:#999;text-decoration:none}
+
+/* ------------------------------------- */
+/*   01.Header  */
+/* ------------------------------------- */
+
+/*  top_bar  */
+#header .top_bar{
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    color: #aaa;
+    ul{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 4px;   //fix:display bug
+        li{
+            height: 40px;
+            padding: 0;
+            margin-left: -4px;  //fix:display bug
+            border-left: 1px solid #eee;
+            font-size: 16px;
+            line-height: 40px;
+            &:last-child{
+                border-right: 1px solid #eee;
+            }
+            &.tell,&.mail{
+                padding: 0 15px;
+            }
+            a{
+                display: block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                color: #eee;
+                i{
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
 }
 
-#map_search input[type=submit] {
-  background-color: transparent;
+/*  nab_bar  */
+/*--------------------------------- */
+#header .nav_bar{
+    border-bottom: 1px solid #eee;
+    .navbar{
+        height: 100px;
+        margin-bottom: 0;
+        &.navbar-default {
+            background: none;
+            border: none;
+        }
 
+        .navbar-header{
+            height: 100px;
+
+            .navbar-toggle {
+                margin-top: 33px;
+                border: none;
+                background: none;
+
+            }
+            .title{
+              /* .navbar-brand{
+                    height: 100px;
+                    padding: 0;
+                    font-size: 54px;
+                    color: #555;
+                    font-family: 'Sacramento';
+
+                }*/
+                .navbar-brand img{
+                    /*height: 100px;
+                    padding: 0;
+                    font-size: 54px;
+                    color: #555;
+                    font-family: 'Sacramento';*/
+                    width:120px;
+                    height: auto;
+                    display :block;
+                    margin:13px 0 0 0;
+                    span{
+                        color: #555;
+                    }
+                    @media screen and (max-width: 767px) {
+                    
+                    }
+                }
+            }
+        }
+
+        .navbar-nav>li>a {
+            padding: 0 0 0 42px;            
+            color: #555;
+            font-size: 18px;
+            font-family: 'Josefin Slab';
+            line-height: 100px;
+            background: rgba(255,255,255,0.9);
+            z-index: 10;
+            span{
+              font-size:12px;
+            }
+            @media screen and (max-width: 991px) {
+                  line-height: 100px;
+            }
+            @media screen and (max-width: 767px) {
+                  line-height: 3.5;
+                  padding: 0 0 0 5px;
+                  border-bottom: 1.5px dotted #ccc;
+
+            }
+        }
+        .navbar-nav>li:last-child>a {
+            @media screen and (max-width: 767px) {
+                  border-bottom: none;
+            }
+        }
+        .navbar-nav>.open>a,
+        .navbar-default .navbar-nav>.open>a:hover,
+        .navbar-default .navbar-nav>.open>a:focus {
+            background: none;
+            color: #FF3838;
+        }
+        .navbar-nav>li>.dropdown-menu {
+            padding: 0;
+            border-top: 2px solid #FF3838;
+            li{
+                height: 42px;
+                a{
+                    padding: 0 20px;
+                    color: #555;
+                    line-height: 42px;
+                }
+            }
+        }
+    }
 }
 
-#map_search input[type=submit] {
-  background-image: url(/assets/search_icon.png) ;
-  border: none;
-  height: 42px;
-  width: 41.5px;
-  margin: 0 0 6px 5px;
+/* ------------------------------------- */
+/*   02.Footer  */
+/* ------------------------------------- */
+#footer{
+    padding: 60px 0;
+    background-color: #fff;
+
+    .footer_panel{
+        min-height: 326px;
+        margin-bottom: 20px;
+        border-right: 1px solid #060606;
+        border-left: 1px solid #2D2D2D;
+        &:first-child{
+            border-left: none;
+        }
+        &.right{    //last-child
+            border-right: none;
+        }
+        .title{
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #eee;
+            font-size: 24px;
+        }
+        .text{
+            color: #aaa;
+        }
+    }
+    .copy{
+        font-size:  18px;
+        color: #847F7F;
+        font-family: 'Josefin Sans', sans-serif;
+    }
 }
 
-#map_search input[type=text] {
-  /*border: 1px solid #000;*/
-  border-radius: 50px;
-  padding: 20px;
-  height: 50px;
-  /*width: 455px;*/
-}
-
-#map_search input[type=text]:focus {
-  outline: none;
-  border: 1px solid #3FB8AF;
-}
-
-#map_search input[type=submit]:focus {
-  outline: none;
-}
-
-#map_search form a {
-  /*background: #000;*/
-  color: #fff;
-  display: inline-block;
-  padding: 9px;
-}
-
-
-/*.main_slider .bk_01{
-  background: rgba(0,0,0,1.0);
- 
-  width: 60%;
-  margin: 0 auto;
-  z−index: 30;
-  height:100%;
-  display: inline-block;
-  position:absolute;
-}
-*/
 
 
 
 
-/*.attribution {
-  position: absolute;
-  top: 5px;
-  right: 45px;
-}
-
-.attribution p {
-  color: #aaa;
-  display: inline-block;
-  padding-top: 2px;
-}
-
-.attribution p.burst {
-  position: absolute;
-  top: -2px;
-}*/
 
 
-/*------検索結果------*/
 
-#results {
-  display: none;
-  margin: 0 auto 10px;
-  width:  90%;
-  padding: 0 0 0 0.3%;
-  /*width: 465px;*/
-}
 
-#results .result {
-  clear: both;
-  animation: fadein .5s;
-  -moz-animation: fadein .5s; /* Firefox */
-  -webkit-animation: fadein .5s; /* Safari and Chrome */
-  -ms-animation: fadein .5s; /* Internet Explorer */
-  -o-animation: fadein .5s; /* Opera */
 
-  background: #fff;
-  border-bottom: 1px solid #e5e5e1;
-  display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 9px 0 5px 0;
-  text-align: left;
-  width: 110px;
-}
-
-#results .result p {
-  margin: 0;
-}
-
-/*お気に入り★ボタン 作成*/
-#results .result input{
-  font-size: 24px;
-  position: absolute;
-  z-index: 10;
-  color:#F9D423;
-  text-decoration: none;
-  margin: -20px 0 0 -16px;
-  cursor: pointer;
-  background:none;
-  border: none;
-  text-shadow: 0 1px #D7A405;
-
-  input:active {
-  color:#F08A4D;
-  font-size: 26px;
-  margin: -20px 0 0 -16px;
-  background: transparent;
-  }
-  input:focus {
-  outline: transparent;
-}
-}
-
-#results .result input[type="submit"]:focus{
-  outline: transparent;
-}
-
-/*---------------*/
-
-.result h5 {
-  font-size: 12px;
-  margin-top: 8px;
-  margin-bottom: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100px;
-  white-space: nowrap;
-  float:left;
-}
-
-.result img.biz_img {
-  float:left;
-  width:px;
-}
-
-.clear {
-  clear: both;
-  margin: 0;
-  padding: 0;
-}
-
-/*------検索結果 お店一覧が見える。---------*/
-
-@keyframes fadein {
-  from { opacity: 0 }
-  to   { opacity: 1 }
-}
-
-/* Firefox */
-@-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Opera */
-@-o-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 

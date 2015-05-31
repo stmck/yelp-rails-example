@@ -11,12 +11,15 @@
 <meta property="og:title" content="vegeres | ベジタリアン・ビーガンのためのレストラン検索">
 <meta property="og:type" content="website">
 <meta property="og:description" content="vegeresは、ベジタリアン・ビーガンの方も、そうではない方も一緒に食事ができるレストランを探せる検索サービスです。" />
-<meta property="og:url" content="https://vegeres.herokuapp.com/">
-<meta property="og:image" content="https://vegeres.herokuapp.com/assets/ogp.jpg" />
+<meta property="og:url" content="//vegeres.herokuapp.com/">
+<meta property="og:image" content="/assets/ogp.png" />
 <meta property="og:site_name" content="vegeres">
-<!--/OGP-->
-<link rel="canonical" href="https://vegeres.herokuapp.com/" />
-<link rel="shortcut icon" href="assets/favicon.ico" />
+<!--/favicon-->
+<%= favicon_link_tag %>
+<!--/app-touch-icon-->
+<%= favicon_link_tag 'apple-touch-icon.png', :rel => 'apple-touch-icon',  :type => 'image/png' %>
+
+<link rel="canonical" href="//vegres.herokuapp.com/" />
 <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS']}&sensor=true" %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -39,15 +42,16 @@
                                 <i class="fa fa-angle-down fa-2x"></i>
                             </button>
                             
-                            <h1 class="title"><span class="navbar-brand"><%= link_to "vegeres", home_index_path , data: { no_turbolink: true } %></span></h1>
+                            <h1 class="title"><span class="navbar-brand">
+                              <%= link_to image_tag("logo.png", :alt => "vegeres", :class => "title") , home_index_path , data: { no_turbolink: true } %>
+                              </span>
+                            </h1>
                         </div>
 
               <!-- deviseのHelperメソッド【もしユーザーがlog inしてたら】-->
               <% if user_signed_in? %>
 
                 <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-                <!-- *_path はUserモデルを作成した時に、
-                  deviseにより自動で作成されるので、rake routesで確認できる。 -->
 
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -65,9 +69,6 @@
                         </ul>
                     </div>
                 
-                  <!-- <span class="m_fadeout"><%= notice %></span> -->
-                  <!-- <span class="m_fadeout"><%= alert %></span> -->
-
         
                 <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
                 <% else %>
@@ -106,6 +107,7 @@
 
 
 <div id="footer" class="clear">
+  <div class="text-center"><a href="/rule">利用規約</a> ｜ <a href="/privacy">プライバシーポリシー</a></div>
       <div class="copy text-center">
           &#169; vegeres
       </div>

@@ -5,11 +5,10 @@
     <div class="main_slider">
         <div class="carousel-inner">
             <div class="item active">
-            <!-- <div class="bk_01"> </div> -->
-
-              <%= image_tag("slider-1.jpg", :alt => "mainvisual") %>
+              <!-- 背景 -->
+              <div class="main_img"><%= image_tag("slider-1a.jpg", :alt => "mainvisual", :class => "img-responsive") %></div>
                 <div class="carousel-caption">
-                    <h3 class="title">vegeres</h3>
+                  <%= image_tag("logo_c.png", :alt => "vegeres", :class => "title") %>
                     <p>ベジタリアン・ビーガンの方も、そうではない方も一緒に楽しく食事ができるレストランを探そう！</p>
 
 
@@ -26,12 +25,12 @@
                       </div><!-- /input-group -->
                       </form>
                       </div><!-- /map_search -->                    
-                    </div>
+                  </div><!-- /carousel-caption --> 
             </div>
         </div>
     </div>
     <!-- /main_slider -->
-</div>
+</div><!-- main -->
 <div class="top_m sign container2">
 <section>
 <h1>How to use <span>“</span>vegeres<span>”</span></h1>
@@ -48,7 +47,7 @@
 <div id="control_container"></div>
 
 
-<p class="yelp_note container"><span>※vegeres</span>は、<span>yelp</span>から情報を提供されています。<a href="http://www.yelp.com/" target="_blank"><%= image_tag("yelp_logo02.png", :alt => "yelp", :width =>"55px") %></a></p>
+<p class="yelp_note"><span>※vegeres</span>は、<span>yelp</span>から情報を提供されています。<a href="http://www.yelp.com/" target="_blank"><%= image_tag("yelp_logo02.png", :alt => "yelp", :width =>"55px") %></a></p>
 </div> 
 
 <!-- 
