@@ -22,7 +22,7 @@ module RailsYelp
     config.i18n.default_locale = :ja
     
     # for heroku
-    # config.serve_static_assets = true
-    # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.serve_static_assets = true
+    config.assets.precompile += %w(.png .jpg .jpeg .gif)
   end
 end
