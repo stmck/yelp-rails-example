@@ -1133,15 +1133,16 @@ input[readonly]{
   }
 
 /*
-−−----プライバシーポリシー ページ-----------*/
-#privacy p{
+−−----プライバシーポリシー・利用規約 ページ-----------*/
+#privacy p,#rule p{
   font-size: 15px;
 }
 
-#privacy h2{
+#privacy h2,#rule h2{
   font-size: 16px;
   margin:23px 0 0 0;
 }
+
 
 
 

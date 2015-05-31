@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'about', to: 'about#index', as: :about_index
   #privacyページ  
   get 'privacy', to: 'privacy#index', as: :privacy_index
-  
+  #利用規約ページ  
+  get 'rule', to: 'rule#index', as: :rule_index
+    
 
   #mypageに、お気に入りにした店を表示するgetメソッド
   #mypageに、お気に入りにした店のパラムスデータをとばすpostメソッド

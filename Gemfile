@@ -43,10 +43,10 @@ gem 'spring',        group: :development
 # Use pry for the console
 gem 'pry-rails', group: :development
 
-gem 'slim'
+# gem 'slim'
 
 group :production do
-  gem 'pg'
+
   gem 'rails_12factor'
 end
 
