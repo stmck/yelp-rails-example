@@ -1,8 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
-
-  config.assets.precompile = ['*.js','*.css']
+  ###
+  # config.assets.precompile = ['*.js','*.css']
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -34,7 +34,7 @@ Rails.application.configure do
   # Generate digests for assets URLs.
   config.assets.digest = true
 
-  # Version of your assets, change this if you want to expire all your assets.
+  ### Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
   # Specifies the header that your server uses for sending files.

@@ -21,8 +21,8 @@ module RailsYelp
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :ja
     
-    # for heroku
-    config.serve_static_assets = true
-    config.assets.precompile += %w(*.js *.css *.svg *.eot *.woff *.ttf *.gif *.png *.ico)
+    ### for heroku
+    # config.serve_static_assets = true
+    # config.assets.precompile += %w(*.js *.css *.svg *.eot *.woff *.ttf *.gif *.png *.ico)
   end
 end
