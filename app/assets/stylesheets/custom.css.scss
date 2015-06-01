@@ -82,6 +82,9 @@ font-size: 0.8em;
 }
 
 /*------トップイメージと重なる黒・vegeresのタイトル---------*/
+.carousel-inner{
+
+}
 
 .carousel-caption {
   background:rgba(0,0,0,0.42);
@@ -635,6 +638,11 @@ ul.other_sign{
     padding:10px;
     color:#FFF;
 }
+
+/*ul.other_sign i{    
+    z-index: 0;
+    background: #000;
+}*/
 
 ul.other_sign li{
   -webkit-appearance: none;
