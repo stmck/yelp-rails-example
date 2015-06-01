@@ -137,7 +137,7 @@ a:hover{color:#999;text-decoration:none}
         .navbar-nav{
              @media screen and (max-width: 767px) {                      
                 margin: 7.5px -15px;
-                z-index: 100;
+                z-index: 1000;
                 position: absolute;
                 width: 100%;
                }
