@@ -22,7 +22,7 @@ html, body {
 }
 
 body{
-font-family:"Josefin Sans",Helvetica,Arial,"Hiragino Kaku Gothic ProN",Meiryo,游ゴシック,YuGothic,sans-serif;
+font-family:"Josefin Sans", "ヒラギノ角ゴシック Pro" , "Hiragino Kaku Gothic Pro", 'メイリオ' , "游ゴシック体", "Yu Gothic", YuGothic, Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 /*  color  */
@@ -132,6 +132,15 @@ a:hover{color:#999;text-decoration:none}
                     }
                 }
             }
+        }
+
+        .navbar-nav{
+             @media screen and (max-width: 767px) {                      
+                margin: 7.5px -15px;
+                z-index: 100;
+                position: absolute;
+                width: 100%;
+               }
         }
 
         .navbar-nav>li>a {
