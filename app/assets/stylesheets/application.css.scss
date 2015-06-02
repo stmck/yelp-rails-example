@@ -193,6 +193,12 @@ a:hover{color:#999;text-decoration:none}
     }
 }
 
+/*  スマホ用ドロップダウン  */
+ul.nav.navbar-nav.navbar-right {
+  z-index: 1000;
+  position: relative;
+}
+
 /* ------------------------------------- */
 /*   02.Footer  */
 /* ------------------------------------- */

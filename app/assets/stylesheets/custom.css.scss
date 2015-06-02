@@ -61,7 +61,7 @@ $key-color: #FF3838;
     }
 }
 .tx_h{
-  font-size: 15.8px;
+  font-size: 16.5px;
   @media (max-width: 767px) {
     font-size:14px;
   }
@@ -403,6 +403,7 @@ font-size: 0.8em;
   white-space: nowrap;
   float:left;
   padding: 5px 0 0 0;
+  font-weight: normal;
 
   @media screen and (max-width: 767px) {
   font-size: 14px;
@@ -623,13 +624,14 @@ span.rem_label{
   padding-left: 10px;
   padding-right: 10px;
   margin:30px auto 0;
-  font-family:"Josefin Sans";
+  font-family:"Josefin Sans", "ヒラギノ角ゴシック Pro" , "Hiragino Kaku Gothic Pro", 'メイリオ' , "游ゴシック体", "Yu Gothic", YuGothic, Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .container2 h1{
   margin:0 auto 40px;
   @media screen and (max-width: 768px) {
   margin:0 auto 25px;
+  font-weight: normal;
   }
 
 }
@@ -817,9 +819,8 @@ input[readonly]{
 
 #about section h1{
   margin:30px auto 20px;
+  font-weight: normal;
 }
-
-
 
 .a_txt02{
   display: block;
@@ -1174,10 +1175,6 @@ input[readonly]{
 /*
 −−----プライバシーポリシー・利用規約 ページ-----------*/
 
-#privacy ,#rule {
-  font-family: "メイリオ";
-}
-
 #privacy p,#rule p{
   font-size: 15px;
 }
@@ -1187,6 +1184,15 @@ input[readonly]{
   margin:23px 0 0 0;
 }
 
+#privacy li,#rule li{
+  font-size: 15px;
+  line-height: 2.1;
+  list-style: none;
+}
+
+#privacy ul,#rule ul{
+  padding:0;  
+}
 
 
 
