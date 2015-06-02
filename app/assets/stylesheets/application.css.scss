@@ -92,11 +92,7 @@ a:hover{color:#999;text-decoration:none}
     .navbar{
         height: 100px;
         margin-bottom: 0;
-        /*  スマホヘッダー用 0602  */
-        @media screen and (max-width: 767px) {
-        min-height: 50px;
-        margin-bottom: 0;
-        }
+        z-index: 100;
         &.navbar-default {
             background: none;
             border: none;
@@ -148,6 +144,7 @@ a:hover{color:#999;text-decoration:none}
                   line-height: 3.5;
                   padding: 0 0 0 5px;
                   border-bottom: 1.5px dotted #ccc;
+                  z-index: 1000;
 
             }
         }
@@ -177,15 +174,20 @@ a:hover{color:#999;text-decoration:none}
     }
 }
 
+/*  スマホヘッダー用 0602  */
 @media screen and (max-width: 767px) {
-/*  スマホ用ドロップダウン  */
-ul.nav.navbar-nav.navbar-right {
-  z-index: 1000;
-  position: relative;
+min-height: 50px;
+margin-bottom: 0;
 }
-
+/*
+@media screen and (max-width: 767px) {
+#header .nav_bar .navbar {
+    height: 100px;
+    margin-bottom: 0;
+    z-index: 100;
 }
-
+}
+*/
 /* ------------------------------------- */
 /*   02.Footer  */
 /* ------------------------------------- */
