@@ -712,7 +712,7 @@ ul.other_sign li a i{
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
-  font-family:"Josefin Sans";
+  font-family:"Josefin Sans", "ヒラギノ角ゴシック Pro" , "Hiragino Kaku Gothic Pro", 'メイリオ' , "游ゴシック体", "Yu Gothic", YuGothic, Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 
@@ -1182,6 +1182,7 @@ input[readonly]{
 #privacy h2,#rule h2{
   font-size: 16px;
   margin:23px 0 0 0;
+  font-weight: normal;
 }
 
 #privacy li,#rule li{
