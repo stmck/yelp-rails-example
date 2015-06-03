@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>http://vegeres.herokuapp.com/</loc>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/about</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/users/sign_up</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/users/login</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/rule</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/privacy</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/users/auth/facebook</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://vegeres.herokuapp.com/users/auth/twitter</loc>
+  <priority>0.7</priority>
+</url>
+
+</urlset>
