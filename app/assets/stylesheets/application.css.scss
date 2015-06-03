@@ -114,8 +114,9 @@ a:hover{color:#999;text-decoration:none}
                 background: none;
                 @media screen and (max-width: 767px) {
                 padding: 0 0 10px 0;
-                margin-top: 33px;
+                margin-top: 26px;
                 }
+
 
 
             }
@@ -125,6 +126,11 @@ a:hover{color:#999;text-decoration:none}
                     height: auto;
                     display :block;
                     margin:13px 0 0 0;
+                    @media screen and (max-width: 767px) {
+                    margin:6px 0 0 0;
+                    width:100px;
+
+                    }                    
                     span{
                         color: #555;
                     }
@@ -186,9 +192,15 @@ a:hover{color:#999;text-decoration:none}
 }
 
 /*  スマホヘッダー用 0602  */
+@media screen and (max-width: 767px) {
+.navbar-collapse{
+    border-top: none;
+}
+#header .nav_bar .navbar .navbar-header {
+  height: 80px;
 
-
-
+}
+}
 /*
 @media screen and (max-width: 767px) {
 #header .nav_bar .navbar {
