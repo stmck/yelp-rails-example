@@ -105,7 +105,9 @@ a:hover{color:#999;text-decoration:none}
 
         .navbar-header{
             height: 100px;
-
+            @media screen and (max-width: 767px) {
+            height: 73px;
+            }
 
 
             .navbar-toggle {
@@ -113,8 +115,10 @@ a:hover{color:#999;text-decoration:none}
                 border: none;
                 background: none;
                 @media screen and (max-width: 767px) {
-                padding: 0 0 10px 0;
-                margin-top: 26px;
+                padding: 0 0 13px 0;
+                margin-top: 23px;
+
+
                 }
 
 
@@ -127,8 +131,9 @@ a:hover{color:#999;text-decoration:none}
                     display :block;
                     margin:13px 0 0 0;
                     @media screen and (max-width: 767px) {
-                    margin:6px 0 0 0;
+                    margin:4px 0 0 -8px;
                     width:100px;
+
 
                     }                    
                     span{
@@ -197,7 +202,7 @@ a:hover{color:#999;text-decoration:none}
     border-top: none;
 }
 #header .nav_bar .navbar .navbar-header {
-  height: 80px;
+  /*height: 80px;*/
 
 }
 }
