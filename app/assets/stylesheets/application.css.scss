@@ -89,13 +89,18 @@ a:hover{color:#999;text-decoration:none}
 #header .nav_bar{
     position: relative;
     border-bottom: 1px solid #eee;
+
+    @media screen and (max-width: 767px) {
+    .container{
+    height: 80px;
+    }
+   }
     .navbar{
         height: 100px;
         margin-bottom: 0;
         z-index: 100;
        @media screen and (max-width: 767px) {
         height: 50px;
-
        }
 
         &.navbar-default {
@@ -106,7 +111,7 @@ a:hover{color:#999;text-decoration:none}
         .navbar-header{
             height: 100px;
             @media screen and (max-width: 767px) {
-            height: 73px;
+            height: 80px;
             }
 
 
@@ -115,9 +120,8 @@ a:hover{color:#999;text-decoration:none}
                 border: none;
                 background: none;
                 @media screen and (max-width: 767px) {
-                padding: 0 0 16px 0;
-                margin-top: 23px;
-
+                padding: 0 0 10px 0;
+                margin-top: 26px;
 
                 }
 
@@ -131,9 +135,8 @@ a:hover{color:#999;text-decoration:none}
                     display :block;
                     margin:13px 0 0 0;
                     @media screen and (max-width: 767px) {
-                    margin:5px 0 0 -4px;
+                    margin:11px 0 0 0;
                     width:100px;
-
 
                     }                    
                     span{
