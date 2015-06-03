@@ -16,8 +16,10 @@
 <meta property="og:site_name" content="vegeres">
 <!--/favicon-->
 <%= favicon_link_tag %>
-<!--/app-touch-icon-->
+<!--/app-touch-icon iphone-->
 <%= favicon_link_tag 'apple-touch-icon.png', :rel => 'apple-touch-icon',  :type => 'image/png' %>
+<!--/app-touch-icon android-->
+<link rel="apple-touch-icon-precomposed" href="//vegeres.herokuapp.com/apple-touch-icon-precomposed.png" />
 
 <link rel="canonical" href="//vegres.herokuapp.com/" />
 <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
