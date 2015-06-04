@@ -1223,6 +1223,23 @@ input[readonly]{
 
 /*お気に入り★ボタン 作成*/
 
+
+
+@media screen and (max-width: 767px) {
+ #results .result input{
+  position: absolute;
+  z-index: 10;
+  color:#F9D423;
+  text-decoration: none;
+  cursor: pointer;
+  background:none;
+  border: none;
+  margin: -19px 0 0 -10px;
+  /*margin: -20px 0 0 -27px;*/
+  font-size: 27.5px;
+  
+}
+}
 /*iphone*/
 @media screen and (max-width: 320px) {
   #results .result input{
@@ -1233,7 +1250,7 @@ input[readonly]{
   text-decoration: none;
 /*margin: -33px 0 0 -54px;*/
   /*margin: -33px 0 0 -54px;*/
-  margin: -30px 0 0 -55px;
+  margin: -30px 0 0 -80px;
   cursor: pointer;
   background:none;
   border: none;
@@ -1250,22 +1267,5 @@ input[readonly]{
 }
 }
 }
-
-@media screen and (max-width: 767px) {
- #results .result input{
-  position: absolute;
-  z-index: 10;
-  color:#F9D423;
-  text-decoration: none;
-  cursor: pointer;
-  background:none;
-  border: none;
-  margin: -20px 0 0 -12px;
-  /*margin: -20px 0 0 -27px;*/
-  font-size: 27.5px;
-  
-}
-}
-
 
 
