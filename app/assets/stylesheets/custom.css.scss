@@ -381,6 +381,11 @@ font-size: 0.8em;
    margin: -20px 0 0 -27px;
   font-size: 27px;
   }
+  /*iphone*/
+  @media screen and (max-width: 320px) {
+    margin: -23px 0 0 -43px;
+    font-size: 30px;
+  }
 
 }
 }
@@ -394,6 +399,12 @@ font-size: 0.8em;
   @media screen and (max-width: 767px) {
   margin: -30px 0 0 -27px;
   font-size: 35px;
+  }
+  /*iphone*/
+  @media screen and (max-width: 320px) {
+    margin: -23px 0 0 -43px;
+    font-size: 50px;
+    text-shadow: 0 1px #D7A405;
   }
 
 }
