@@ -1225,7 +1225,7 @@ input[readonly]{
 
 
 
-@media screen and @media (min-width: 321px) and (max-width: 767px)  {
+@media screen and (min-width: 321px) and (max-width: 767px) {
  #results .result input{
   position: absolute;
   z-index: 10;
