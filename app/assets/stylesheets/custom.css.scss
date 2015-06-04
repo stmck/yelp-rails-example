@@ -1231,20 +1231,22 @@ input[readonly]{
   z-index: 10;
   color:#F9D423;
   text-decoration: none;
-  margin: -30px 0 0 -60px;
+  margin: -30px 0 0 -52px;
   /*margin: -3px 0 0 -5%;*/
   cursor: pointer;
   background:none;
   border: none;
   /*text-shadow: 0 1px #D7A405;*/
-  input:focus {
+  :focus {
   outline: transparent;
   margin: -3px 0 0 -5%;
   font-size: 50px;
 }
+ :active {
+  font-size: 50px;
 }
 }
-
+}
 #results .result input:active {
   color:rgba(249, 212, 35, 0.95);
   font-size: 28px;
