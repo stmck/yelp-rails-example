@@ -1225,7 +1225,7 @@ input[readonly]{
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and @media (min-width: 321px) and (max-width: 767px)  {
  #results .result input{
   position: absolute;
   z-index: 10;
@@ -1234,7 +1234,7 @@ input[readonly]{
   cursor: pointer;
   background:none;
   border: none;
-  margin: -19px 0 0 -10px;
+  margin: -19px 0 0 -15px;
   /*margin: -20px 0 0 -27px;*/
   font-size: 27.5px;
   
@@ -1250,7 +1250,7 @@ input[readonly]{
   text-decoration: none;
 /*margin: -33px 0 0 -54px;*/
   /*margin: -33px 0 0 -54px;*/
-  margin: -30px 0 0 -80px;
+  margin: -30px 0 0 -54px;
   cursor: pointer;
   background:none;
   border: none;
