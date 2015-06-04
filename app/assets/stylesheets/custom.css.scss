@@ -409,10 +409,6 @@ font-size: 0.8em;
 
 }
 
-#results .result input[type="submit"]{
-}
-
-
 #results .result input[type="submit"]:focus{
   outline: transparent;
 }
@@ -1223,5 +1219,31 @@ input[readonly]{
 #privacy ul,#rule ul{
   padding:0;  
 }
+
+
+/*お気に入り★ボタン 作成*/
+
+/*iphone*/
+@media screen and (max-width: 320px) {
+  #results .result input{
+  font-size: 25px;
+  position: absolute;
+  z-index: 10;
+  color:#F9D423;
+  text-decoration: none;
+  margin: -20px 0 0 -16px;
+  cursor: pointer;
+  background:none;
+  border: none;
+  /*text-shadow: 0 1px #D7A405;*/
+  input:focus {
+  outline: transparent;
+
+    margin: -23px 0 0 -43px;
+    font-size: 30px;  
+}
+}
+}
+
 
 
