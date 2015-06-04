@@ -1231,17 +1231,17 @@ input[readonly]{
   z-index: 10;
   color:#F9D423;
   text-decoration: none;
-  margin: -28px 0 0 -49px;
+  margin: -29px 0 0 -51px;
   /*margin: -3px 0 0 -5%;*/
   cursor: pointer;
   background:none;
   border: none;
   /*text-shadow: 0 1px #D7A405;*/
-  :focus {
+/*  :focus {
   outline: transparent;
   margin: -3px 0 0 -5%;
   font-size: 50px;
-}
+}*/
  :active {
   font-size: 50px;
 }
@@ -1259,7 +1259,7 @@ input[readonly]{
   background:none;
   border: none;
 
-  margin: -27px 0 0 -27px;
+  margin: -18px 0 0 -23px;
 }
 }
 
