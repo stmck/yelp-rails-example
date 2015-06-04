@@ -1226,12 +1226,12 @@ input[readonly]{
 /*iphone*/
 @media screen and (max-width: 320px) {
   #results .result input{
-  font-size: 30px;
+  font-size: 31px;
   position: absolute;
   z-index: 10;
   color:#F9D423;
   text-decoration: none;
-  margin: -29px 0 0 -51px;
+  margin: -30px 0 0 -52px;
   /*margin: -3px 0 0 -5%;*/
   cursor: pointer;
   background:none;
@@ -1259,7 +1259,7 @@ input[readonly]{
   background:none;
   border: none;
 
-  margin: -18px 0 0 -23px;
+  margin: -18px 0 0 -21px;
 }
 }
 
