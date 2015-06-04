@@ -1233,7 +1233,7 @@ input[readonly]{
   text-decoration: none;
 /*margin: -33px 0 0 -54px;*/
   /*margin: -33px 0 0 -54px;*/
-  margin: -30px 0 0 -5%;
+  margin: -30px 0 0 -12%;
   cursor: pointer;
   background:none;
   border: none;
@@ -1260,32 +1260,12 @@ input[readonly]{
   cursor: pointer;
   background:none;
   border: none;
-  margin: -20px 0 0 -21px;
+  margin: -20px 0 0 -15px;
   /*margin: -20px 0 0 -27px;*/
   font-size: 27px;
   
 }
 }
 
-#results .result input:active {
-  color:rgba(249, 212, 35, 0.95);
-  font-size: 28px;
-  margin: -20px 0 0 -16px;
-  background: transparent;
-
-  @media screen and (max-width: 767px) {
-  margin: -30px 0 0 -27px;
-  font-size: 35px;
-  }
-
-
-  /*iphone*/
-  @media screen and (max-width: 320px) {
-    margin: -23px 0 0 -43px;
-    font-size: 60px;
-    text-shadow: 0 1px #D7A405;
-  }
-
-}
 
 
