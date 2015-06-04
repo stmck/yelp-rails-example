@@ -1231,7 +1231,7 @@ input[readonly]{
   z-index: 10;
   color:#F9D423;
   text-decoration: none;
-  margin: -30px 0 0 -52px;
+  margin: -31px 0 0 -53px;
   /*margin: -3px 0 0 -5%;*/
   cursor: pointer;
   background:none;
@@ -1248,7 +1248,7 @@ input[readonly]{
 }
 }
 
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
  #results .result input{
  font-size: 25px;
   position: absolute;
@@ -1262,7 +1262,7 @@ input[readonly]{
   margin: -18px 0 0 -21px;
 }
 }
-
+*/
 #results .result input:active {
   color:rgba(249, 212, 35, 0.95);
   font-size: 28px;
