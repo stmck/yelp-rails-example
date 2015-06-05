@@ -37,7 +37,7 @@ var initialize = function() {
   // Define some options for the map
   var mapOptions = {
     center: new google.maps.LatLng(SF_LAT, SF_LNG),
-    zoom: 6,
+    zoom: 4,
 
     // hide controls
     panControl: false,
