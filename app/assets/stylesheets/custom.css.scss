@@ -1222,9 +1222,6 @@ input[readonly]{
 
 
 /*お気に入り★ボタン 作成*/
-
-
-
 @media screen and (min-width: 321px) and (max-width: 767px) {
  #results .result input{
   position: absolute;
@@ -1234,8 +1231,8 @@ input[readonly]{
   cursor: pointer;
   background:none;
   border: none;
-  /*margin: -19px 0 0 -20px;*/
-  margin: -20px 0 0 -27px;
+  margin: -19px 0 0 -20px;
+  /*margin: -20px 0 0 -27px;*/
   font-size: 27.5px;  
 }
 }

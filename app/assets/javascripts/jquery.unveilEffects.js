@@ -5,6 +5,7 @@
  * - Author: @geedmo
  * - URI: https://github.com/geedmo
  */
+ window.onload = unveil;
 
 !(function($) {
 
