@@ -12,19 +12,18 @@
                     <p>ベジタリアン・ビーガンの方も、そうではない方も一緒に楽しく食事ができるレストランを探そう！</p>
 
 
-                    <div id="map_search">
-
-                      <form class="form-search">
+                <div id="map_search">
+                  <form class="form-search" method="get" >
                       <a id="map_search_submit">
                       <div class="input-group">
-                        <input type="text" class="form-control input-medium search-query" placeholder="例：東京駅、渋谷駅">
+                        <input type="text" class="form-control input-medium search-query" placeholder="例：東京駅、渋谷駅" value="<%= params[:q] %>" >
 
                         <span class="input-group-btn">
-                          <input alt="検索" value="<%= params[:q] %>" type="submit" >
+                          <input alt="検索" type="submit" value="検索">
                         </span>
                       </div><!-- /input-group -->
-                      </form>
-                      </div><!-- /map_search -->                    
+                  </form>
+                  </div><!-- /map_search -->                    
                   </div><!-- /carousel-caption --> 
             </div>
         </div>

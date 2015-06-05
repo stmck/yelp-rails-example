@@ -6,6 +6,12 @@
  * - URI: https://github.com/geedmo
  */
 
+ // カリで入れてみる
+$(document).ready(function() {
+  // initialize the map on load
+  unveilEffect();
+});
+
 
 !(function($) {
 
