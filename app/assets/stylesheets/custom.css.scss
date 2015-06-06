@@ -82,9 +82,6 @@ font-size: 0.8em;
 }
 
 /*------トップイメージと重なる黒・vegeresのタイトル---------*/
-.carousel-inner{
-
-}
 
 .carousel-caption {
   background:rgba(0,0,0,0.42);
@@ -164,14 +161,12 @@ font-size: 0.8em;
 }
 
 /*htmlソース内のmainvisual 野菜*/
-
 .main_slider .main_img img{
 
   background-image: none;
 
-   @media (min-width: 1400px) {
+  @media (min-width: 1400px) {
     display:none;
-
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -186,7 +181,6 @@ font-size: 0.8em;
 }
 
 /*bg mainvisual 野菜、スマホmax-width: 768pxより下の時のみ使用*/
-
 .main_slider .main_img{
 
    @media (min-width: 1400px) {
@@ -274,11 +268,6 @@ font-size: 0.8em;
   }
 }
 
-
-
-
-
-
 #map_search input[type=text]:focus {
   outline: none;
   border: 1px solid #3FB8AF;
@@ -309,7 +298,6 @@ font-size: 0.8em;
   @media screen and (max-width: 767px) {
         width: 100%;
         height: 70%;
-
   }
 }
 
@@ -360,8 +348,6 @@ font-size: 0.8em;
   }
 }
 
-
-
 /*お気に入り★ボタン 作成*/
 #results .result input{
   font-size: 25px;
@@ -403,7 +389,7 @@ font-size: 0.8em;
   /*iphone*/
   @media screen and (max-width: 320px) {
     margin: -23px 0 0 -43px;
-    font-size: 50px;
+    font-size: 35px;
     text-shadow: 0 1px #D7A405;
   }
 
@@ -413,7 +399,7 @@ font-size: 0.8em;
   outline: transparent;
 }
 
-/*---------------*/
+/*------トップお店一覧の部分---------*/
 
 .result h5 {
   font-size: 12px;
@@ -488,7 +474,6 @@ font-size: 0.8em;
 
 /*
 --------ログイン画面など---------*/
-
 
 /*タイトル*/
 .sign h1{
@@ -568,7 +553,6 @@ input[type="checkbox"]{
 
   }
 }
-
 
 span.rem_label{
     margin:3px 0 0 0;
@@ -737,7 +721,6 @@ ul.other_sign li a i{
   font-family:"Josefin Sans", "ヒラギノ角ゴシック Pro" , "Hiragino Kaku Gothic Pro", 'メイリオ' , "游ゴシック体", "Yu Gothic", YuGothic, Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-
 #mypage .result {
   animation: fadein .5s;
   -moz-animation: fadein .5s;
@@ -850,8 +833,6 @@ input[readonly]{
   margin: 30px auto 0;
 }
 
-
-
 .p_01{
   width: 100%;
 }
@@ -910,8 +891,6 @@ input[readonly]{
 }
 
 
-
-
 /* green Section - Picton */
 #picton {
   background: #54C8C0;
@@ -956,11 +935,9 @@ input[readonly]{
   padding: 0 20px;
     .fa_note{
       margin:0 0 40px;
-
 }
 }
 }
-
 }
 
 #fa .col-md-6 {
@@ -976,10 +953,6 @@ input[readonly]{
   font-size: 16px;
 }
 
-
-
-
-
 /* スマホの時、中心にimg */
 #w .pull-right img{
   margin-left:5px;
@@ -992,7 +965,7 @@ input[readonly]{
 }
 
 #picton .pull-left img{
-    margin-left:-5px;
+  margin-left:-5px;
 
   @media screen and (max-width: 768px) {
         width: 100%;
@@ -1004,7 +977,7 @@ input[readonly]{
 }
 
 #fa .fa_img img{
-    margin-left:4px;
+  margin-left:4px;
 
   @media screen and (max-width: 768px) {
         width: 100%;
@@ -1019,7 +992,6 @@ input[readonly]{
     margin-right: 0px;
 }
 }
-
 
 
 /*CUSTOM ANIMATIONS*/
@@ -1220,8 +1192,11 @@ input[readonly]{
   padding:0;  
 }
 
+/*
+−−----トップページ お気に入りボタンの上にあるものを上書き----------*/
 
 /*お気に入り★ボタン 作成*/
+/*iphoneより少し大きい mini tablet*/
 @media screen and (min-width: 321px) and (max-width: 767px) {
  #results .result input{
   position: absolute;
@@ -1231,6 +1206,8 @@ input[readonly]{
   cursor: pointer;
   background:none;
   border: none;
+  /*nexusの方はこちらかも↓*/
+  /*margin: -28px 0 0 -20px;*/
   margin: -19px 0 0 -20px;
   /*margin: -20px 0 0 -27px;*/
   font-size: 27.5px;  
@@ -1251,13 +1228,15 @@ input[readonly]{
   border: none;
 }
 }
-
-
+/*iphone ★押したときの挙動*/
 @media screen and (max-width: 320px) {
   #results .result input:active {
-  font-size: 50px;
-  /*background: #000;*/
+  margin: -30px 0 0 -40px;
+  font-size: 35px;
 }
 }
+
+
+
 
 

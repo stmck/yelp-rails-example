@@ -59,10 +59,10 @@
                             </h1>
                         </div>
 
-              <!-- deviseのHelperメソッド【もしユーザーがlog inしてたら】-->
+              <!-- deviseのHelperメソッド ユーザーがlog inしてたら -->
               <% if user_signed_in? %>
 
-                <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+                <!-- current_user は現在ログインしているUser-->
 
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -82,7 +82,7 @@
                     </div>
                 
         
-                <!-- deviseのHelperメソッド【もしユーザーがlog inしてないなら】-->
+                <!-- deviseのHelperメソッド もしユーザーがlog inしてないなら -->
                 <% else %>
                                   
                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -114,7 +114,6 @@
 
 
 <!--MAP・検索フォーム homeフォルダindex.html.erbをよびだし。-->
-
 <%= yield %>
 
 

@@ -37,7 +37,7 @@ var initialize = function() {
   // Define some options for the map
   var mapOptions = {
     center: new google.maps.LatLng(SF_LAT, SF_LNG),
-    zoom: 4,
+    zoom: 5,
 
     // hide controls
     panControl: false,
@@ -77,9 +77,6 @@ var bind_controls = function(map) {
     e.preventDefault();
     search(map);
   });
-
-
-
 
 
   // push the search controls onto the map
